@@ -9,9 +9,10 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
     min-height: 100vh;
+    margin: 0;
 }
 
 
@@ -48,8 +49,8 @@ body {
 
 .brand-text {
     height: 26px;
-    /* tweak until it looks right */
     width: auto;
+    /* tweak until it looks right */
     display: block;
 }
 
@@ -73,6 +74,28 @@ body {
 }
 
 .social-fb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 24px;
+    width: 24px;
+    transition: 0.3s;
+}
+
+.social-ig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 24px;
+    width: 24px;
+    transition: 0.3s;
+}
+
+.social-tiktok {
     display: flex;
     align-items: center;
     justify-content: center;
