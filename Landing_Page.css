@@ -68,6 +68,10 @@ body {
     align-items: center;
 }
 
+.nav-links a:hover {
+    color: #2683EB;
+}
+
 .nav-links a {
     display: flex;
     align-items: center;
@@ -79,57 +83,46 @@ body {
     transition: 0.3s;
 }
 
-.social-fb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    height: 24px;
-    width: 24px;
-    transition: 0.3s;
-}
-
-.social-ig {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    height: 24px;
-    width: 24px;
-    transition: 0.3s;
-}
-
+.social-fb,
+.social-ig,
 .social-tiktok {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: white;
+    /* Default color */
     height: 24px;
     width: 24px;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #90BADA;
+.social-fb:hover,
+.social-ig:hover,
+.social-tiktok:hover {
+    filter: invert(36%) sepia(99%) saturate(1476%) hue-rotate(186deg) brightness(91%) contrast(101%);
 }
 
-.button {
+.inquire-button {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     font-family: "Radio Canada Big", sans-serif;
     font-size: 20px;
     background-color: #90BADA;
-    color: #ffffff;
+    color: #000000;
     width: 100px;
     height: 30px;
     transition: 0.3s;
     border-radius: 10px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.inquire-button:hover {
+    background: linear-gradient(to bottom, #6dd5ed, #2683EB);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
 }
 
 
