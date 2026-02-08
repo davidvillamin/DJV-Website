@@ -4,15 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>DJV IT Solutions</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net">
     <link rel="icon" type="image/x-icon" href="/DJV-Website/Assets/ICON_FINAL.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Landing_Page.css">
 
+    <link rel="stylesheet" href="Landing_Page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -23,6 +26,8 @@
                 <img src="/DJV-Website/Assets/ICON_FINAL.png" class="logo">
                 <img src="/DJV-Website/Assets/Dark-Text-Logo.png" class="brand-text">
             </div>
+
+            <div class="menu-toggle">&#9776</div>
 
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -49,18 +54,22 @@
                     </a>
                 </li>
 
-
-                <li class="inquire-button">
+                <li>
                     <button class="inquire-button">Inquire</button>
-                    <a href="#" target="_blank"></a>
                 </li>
 
             </ul>
 
         </nav>
-
-
     </header>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
