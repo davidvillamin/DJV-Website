@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <section>
+        <section class="hero">
         <nav class="navbar">
 
             <div class="brand">
@@ -79,9 +79,53 @@
         <button class="text-button">Learn More</button>
     </a>
     </section>
+    
     <section class="services">
         <h3>Our Services</h3>
         <h4>Reliable services for businesses and individuals to stay connected and secure.</h4>
+        
+        <nav class="services-nav">
+        <ul>
+        <li><a href="" class="active">Laptop / Computer Services</a></li>
+        <li><a href="">Printer Services</a></li>
+        <li><a href="">CCTV Services</a></li>
+        <li><a href="">Network / IP / PBX Services</a></li>
+        <li><a href="">IT Consultancy</a></li>
+        <li><a href="">Web Base / Server System Deployment</a></li>
+        </ul>
+        </nav>
+        
+        <div class="slider-container">
+        <button class="arrow left-arrow" onclick="scrollSlider(-1)">&#10094;</button>
+    
+        <div class="slider-wrapper" id="slider">
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Laptop / Computer Services</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="learn-more-link">Learn More &rarr;</a>
+            </div>
+            <div class="slide-image">
+                <img src="laptop-image.jpg" alt="Laptop Repair">
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Printer Services</h3>
+                <p>Professional printer repair and maintenance for all major brands and models.</p>
+                <a href="#" class="learn-more-link">Learn More &rarr;</a>
+            </div>
+            <div class="slide-image">
+                <img src="printer-image.jpg" alt="Printer">
+            </div>
+        </div>
+    </div>
+
+    <button class="arrow right-arrow" onclick="scrollSlider(1)">&#10095;</button>
+</div>
+          
+       
     </section>
 
     <!--Script for Hamburger Menu-->
@@ -93,6 +137,9 @@
             navLinks.classList.toggle('active');
         });
     </script>
+
+    
+</body>
 </body>
 
 </html>
