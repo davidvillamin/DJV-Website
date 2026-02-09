@@ -1,0 +1,224 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Radio Canada Big", sans-serif;
+    background: linear-gradient(to bottom, #0F5D99 30%, #0061A9 40%, #0086C5 50%, #2683EB 60%, #ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    /* adjust the black background */
+    overflow: hidden;
+}
+
+
+/* BRAND GROUP */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* LOGO */
+
+.logo {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+
+/* BRAND TEXT */
+
+.brand-text {
+    height: 26px;
+    width: auto;
+    /* tweak until it looks right */
+    display: block;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: #2683EB;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    gap: 18px;
+    padding: 6px 6px;
+    transition: 0.3s;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+
+/* Social Media Links */
+
+.social-fb,
+.social-ig,
+.social-tiktok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 24px;
+    width: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-fb:hover,
+.social-ig:hover,
+.social-tiktok:hover {
+    filter: invert(36%) sepia(99%) saturate(1476%) hue-rotate(186deg) brightness(91%) contrast(101%);
+}
+
+
+/* Button */
+
+.inquire-button {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+    background-color: #90BADA;
+    color: #000000;
+    width: 100px;
+    height: 30px;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inquire-button:hover {
+    background: linear-gradient(to bottom, #6dd5ed, #2683EB);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+.welcome-text {
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family: "Source Serif Pro";
+    position: absolute;
+    left: 480px;
+    bottom: 50px;
+    top: 200px;
+    kerning: 10px;
+}
+
+.welcome-subtext {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 45px;
+    font-family: "Radio Big Canada";
+    position: absolute;
+    left: 470px;
+    bottom: 80px;
+    top: 300px;
+    kerning: 500px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navbar {
+        flex-direction: row;
+        padding: 12px 16px;
+        height: 64px;
+        width: 100%;
+    }
+    .brand {
+        gap: 8px;
+        max-width: 80%;
+    }
+    .logo {
+        height: 34px;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 0;
+        z-index: 1000;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+    .brand-text {
+        height: 18px;
+    }
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        cursor: pointer;
+    }
+    .social-fb,
+    .social-ig,
+    .social-tiktok {
+        display: block;
+    }
+    .inquire-button {
+        display: none;
+    }
+}
