@@ -151,21 +151,237 @@ body {
     transform: translateY(-1px);
 }
 
-.service-text {
+.service-text h2 {
     font-weight: 100;
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
     color: white;
-    font-family: "Source Serif Pro";
+    font-family: 'Radio Canada Big';
     position: absolute;
-    left: 480px;
+    left: 625px;
     bottom: 50px;
     top: 200px;
     kerning: 10px;
 }
 
+.service-description-text p {
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    font-family: 'Radio Canada Big';
+    position: absolute;
+    left: 498px;
+    bottom: 50px;
+    top: 350px;
+    kerning: 10px;
+}
+
 .menu-toggle {
     display: none;
+}
+
+
+/* SERVICE CARDS GRID */
+
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 403px);
+    /* 3 cards per row */
+    gap: 40px;
+    justify-content: center;
+    margin-top: 600px;
+    padding-bottom: 100px;
+}
+
+
+/* CARD STYLE */
+
+.service-card {
+    width: 403px;
+    height: 579px;
+    background: #f8fbff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* IMAGE */
+
+.card-image {
+    position: relative;
+    height: 230px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* OVERLAY TEXT */
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-overlay h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-overlay p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.card-overlay a {
+    margin-top: auto;
+}
+
+.btn {
+    padding: 14px 16px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* CARD LIST */
+
+.cardlist {
+    padding: 20px;
+    list-style: none;
+}
+
+.cardlist li {
+    padding-left: 18px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.cardlist li::before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: #0d6efd;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #6C6C6C;
+    color: white;
+    padding: 50px 20px 20px 20px;
+    font-family: 'Radio Canada Big';
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+/* CENTER LOGO + SOCIAL ICONS IN FIRST COLUMN */
+
+.footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul,
+.footer-col a {
+    font-size: 14px;
+    color: #ffffff;
+    /* white links by default */
+    text-decoration: none;
+    /* remove underline */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    background: linear-gradient(to bottom, #6dd5ed, #2683EB);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+    /* blue on hover */
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+
+/* SOCIAL ICONS FIX */
+
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: -20px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* normal background */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    /* smooth hover transition */
+}
+
+
+/* HIGHLIGHT ONLY ON HOVER */
+
+.footer .social-icons a:hover {
+    background: #2683EB;
 }
 
 
@@ -242,5 +458,79 @@ body {
         left: auto;
         top: 100px;
         letter-spacing: 1px
+    }
+    /* MOBILE SERVICE CARDS */
+    .services-cards {
+        grid-template-columns: 1fr;
+        /* 1 card per row */
+        gap: 25px;
+        margin-top: 260px;
+        /* fixes huge top gap */
+        padding: 0 16px 60px;
+    }
+    .service-card {
+        width: 100%;
+        height: auto;
+        /* allow content to grow */
+    }
+    .card-image {
+        height: 180px;
+    }
+    .card-overlay {
+        padding: 20px;
+    }
+    .card-overlay h3 {
+        font-size: 18px;
+    }
+    .card-overlay p {
+        font-size: 13px;
+    }
+    .cardlist {
+        padding: 16px;
+    }
+    .cardlist li {
+        font-size: 14px;
+    }
+    .footer {
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .footer-col {
+        min-width: 100%;
+    }
+    /* Logo + social icons */
+    .footer-col:first-child {
+        align-items: center;
+    }
+    .footer .social-icons {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    /* Section titles */
+    .footer-col h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    /* Links list */
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+    /* Remove blue hover on mobile */
+    .footer-col ul li a:hover {
+        color: #ffffff;
+        opacity: 0.85;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        margin-top: 25px;
+        padding-top: 10px;
     }
 }
