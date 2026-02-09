@@ -32,9 +32,9 @@
 
             <ul class="nav-links">
                 <li><a href="Landing_Page.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="About_Page.html">About</a></li>
                 <li><a href="Services_Page.html" class="active">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="Contact_Us_Page.html">Contact Us</a></li>
 
                 <!-- Social media links -->
                 <li class="social">
@@ -67,6 +67,16 @@
         </div>
 
     </header>
+
+    <!--Script for Hamburger Menu-->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
