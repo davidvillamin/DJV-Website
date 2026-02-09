@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: "Radio Canada Big", sans-serif;
-    background: linear-gradient(to bottom, #0F5D99 30%, #0061A9 40%, #0086C5 50%, #2683EB 60%, #ffffff 100%);
+    background: linear-gradient(to bottom, #0F5D99 30%, #0061A9 40%, #0086C5 50%, #2683EB 100%);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -159,6 +159,25 @@ body {
     left: 470px;
     bottom: 80px;
     top: 300px;
+}
+
+.nav-links a.active {
+    color: #2683EB;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2683EB;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 
