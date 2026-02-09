@@ -27,7 +27,8 @@ body {
     background: black;
     width: 100%;
     height: auto;
-    padding: 35px 20px;
+    padding: 20px 20px;
+    /* adjust the black background */
     overflow: hidden;
 }
 
@@ -133,6 +134,32 @@ body {
     background: linear-gradient(to bottom, #6dd5ed, #2683EB);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-1px);
+}
+
+.welcome-text {
+    text-align: center;
+    color: white;
+    font-weight: small;
+    font-size: 50px;
+    font-family: "Source Serif Pro";
+    position: absolute;
+    left: 480px;
+    bottom: 50px;
+    top: 200px;
+    kerning: 10px;
+}
+
+.welcome-subtext {
+    text-align: center;
+    color: white;
+    font-weight: 100px;
+    font-size: 45px;
+    font-family: "Radio Big Canada";
+    position: absolute;
+    left: 470px;
+    bottom: 80px;
+    top: 300px;
+    kerning: 500px;
 }
 
 
