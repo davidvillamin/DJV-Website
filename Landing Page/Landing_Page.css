@@ -137,10 +137,10 @@ body {
 }
 
 .welcome-text {
+    font-weight: 100;
+    font-size: 50px;
     text-align: center;
     color: white;
-    font-weight: small;
-    font-size: 50px;
     font-family: "Source Serif Pro";
     position: absolute;
     left: 480px;
@@ -152,7 +152,7 @@ body {
 .welcome-subtext {
     text-align: center;
     color: white;
-    font-weight: 100px;
+    font-weight: 100;
     font-size: 45px;
     font-family: "Radio Big Canada";
     position: absolute;
