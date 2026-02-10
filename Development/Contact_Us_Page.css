@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Radio Canada Big';
-    background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
+    background: linear-gradient(to bottom, #146CAE 54%, #0d8ddb 100%, #082D48 100%);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -136,17 +136,46 @@ body {
     transform: translateY(-1px);
 }
 
-.contact-us-text h2 {
+.hero {
+    position: relative;
+    height: 450px;
+    background-image: url(/DJV-Website/Assets/guy-laptop.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h1 {
     font-weight: 100;
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
     color: white;
     font-family: 'Radio Canada Big';
     position: absolute;
-    left: 480px;
-    bottom: 50px;
-    top: 200px;
-    kerning: 10px;
+    left: 38%;
+    bottom: 60%;
+    top: 38%;
+}
+
+.hero-content p {
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Radio Canada Big';
+    position: absolute;
+    left: 19%;
+    bottom: 60%;
+    top: 65%;
 }
 
 .nav-links a.active {
@@ -166,6 +195,117 @@ body {
 
 .menu-toggle {
     display: none;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #6C6C6C;
+    color: white;
+    padding: 50px 20px 20px 20px;
+    font-family: 'Radio Canada Big';
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+/* CENTER LOGO + SOCIAL ICONS IN FIRST COLUMN */
+
+.footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul,
+.footer-col a {
+    font-size: 14px;
+    color: #ffffff;
+    /* white links by default */
+    text-decoration: none;
+    /* remove underline */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    color: black;
+    transform: translateY(-1px);
+    /* blue on hover */
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    padding-left: 20;
+}
+
+
+/* SOCIAL ICONS FIX */
+
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: -20px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* normal background */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    /* smooth hover transition */
+}
+
+.social-fb:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-ig:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-tiktok:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
 }
 
 
@@ -229,18 +369,63 @@ body {
     .inquire-button {
         display: none;
     }
-    .contact-us-text {
-        display: block;
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    .hero-content h1,
+    .hero-content p {
+        position: static;
         text-align: center;
-        color: white;
-        font-weight: 300;
-        font-size: 30px;
-        font-family: "Source Serif Pro";
-        position: absolute;
-        margin: 20px auto;
-        width: 100%;
-        left: auto;
-        top: 100px;
-        letter-spacing: 1px
+    }
+    .hero-content h1 {
+        margin-top: 40px;
+        font-size: 36px;
+    }
+    .hero-content p {
+        margin-top: 12px;
+        font-size: 16px;
+    }
+    .footer {
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .footer-col {
+        min-width: 100%;
+    }
+    /* Logo + social icons */
+    .footer-col:first-child {
+        align-items: center;
+    }
+    .footer .social-icons {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    /* Section titles */
+    .footer-col h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    /* Links list */
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+    /* Remove blue hover on mobile */
+    .footer-col ul li a:hover {
+        color: #ffffff;
+        opacity: 0.85;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        margin-top: 25px;
+        padding-top: 10px;
     }
 }

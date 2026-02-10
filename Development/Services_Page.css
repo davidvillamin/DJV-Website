@@ -151,29 +151,28 @@ body {
     transform: translateY(-1px);
 }
 
-.service-text h2 {
+.service-hero h2 {
     font-weight: 100;
     font-size: 80px;
     text-align: center;
     color: white;
     font-family: 'Radio Canada Big';
     position: absolute;
-    left: 41%;
-    bottom: 50px;
-    top: 200px;
-    kerning: 10px;
+    left: 42%;
+    bottom: 60%;
+    top: 38%;
 }
 
-.service-description-text p {
+.service-hero p {
     font-weight: 100;
+    font-size: 20px;
     text-align: center;
     color: white;
     font-family: 'Radio Canada Big';
     position: absolute;
-    left: 498px;
-    bottom: 50px;
-    top: 350px;
-    kerning: 10px;
+    left: 30%;
+    bottom: 50%;
+    top: 60%;
 }
 
 .menu-toggle {
@@ -338,8 +337,7 @@ body {
 }
 
 .footer-col ul li a:hover {
-    background: linear-gradient(to bottom, #6dd5ed, #2683EB);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    color: black;
     transform: translateY(-1px);
     /* blue on hover */
 }
@@ -377,11 +375,19 @@ body {
     /* smooth hover transition */
 }
 
+.social-fb:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
 
-/* HIGHLIGHT ONLY ON HOVER */
+.social-ig:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
 
-.footer .social-icons a:hover {
-    background: #2683EB;
+.social-tiktok:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
 }
 
 
@@ -445,19 +451,32 @@ body {
     .inquire-button {
         display: none;
     }
-    .service-text {
-        display: block;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        font-size: 30px;
-        font-family: "Source Serif Pro";
-        position: absolute;
-        margin: 20px auto;
-        width: 100%;
+    /* HERO SECTION*/
+    .service-hero {
+        position: relative;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 20px 40px;
+    }
+    .service-hero h2,
+    .service-hero p {
+        position: static;
         left: auto;
-        top: 100px;
-        letter-spacing: 1px
+        top: auto;
+        bottom: auto;
+        text-align: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+    .service-hero h2 {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+    .service-hero p {
+        font-size: 16px;
+        line-height: 1.5;
     }
     /* MOBILE SERVICE CARDS */
     .services-cards {
