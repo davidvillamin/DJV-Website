@@ -27,13 +27,14 @@
                     <img src="/DJV-Website/Assets/ICON_FINAL.png" class="logo">
                     <img src="/DJV-Website/Assets/Dark-Text-Logo.png" class="brand-text">
                 </div>
+
                 <!-- Hamburger Menu -->
-                <div class="menu-toggle">&#9776</div>
+                <div class="menu-toggle">&#9776;</div>
 
                 <ul class="nav-links">
                     <li><a href="Landing_Page.html" class="active">Home</a></li>
-                    <li><a href="About_Page.html">About</a></li>
                     <li><a href="Services_Page.html">Services</a></li>
+                    <li><a href="About_Page.html">About</a></li>
                     <li><a href="Contact_Us_Page.html">Contact Us</a></li>
 
                     <!-- Social media links -->
@@ -56,10 +57,8 @@
                     </li>
 
                     <li>
-                        <!-- Button for inquiries -->
                         <button class="inquire-button">Inquire</button>
                     </li>
-
                 </ul>
 
             </nav>
@@ -86,12 +85,12 @@
 
         <nav class="services-nav">
             <ul>
-                <li><a href="" class="active">Laptop / Computer Services</a></li>
-                <li><a href="">Printer Services</a></li>
-                <li><a href="">CCTV Services</a></li>
-                <li><a href="">Network / IP / PBX Services</a></li>
-                <li><a href="">IT Consultancy</a></li>
-                <li><a href="">Web Base / Server System Deployment</a></li>
+                <li><a href="javascript:void(0)" class="active" data-index="0">Laptop / Computer Services</a></li>
+                <li><a href="javascript:void(0)" data-index="1">Printer Services</a></li>
+                <li><a href="javascript:void(0)" data-index="2">CCTV Services</a></li>
+                <li><a href="javascript:void(0)" data-index="3">Network / IP / PBX Services</a></li>
+                <li><a href="javascript:void(0)" data-index="4">IT Consultancy</a></li>
+                <li><a href="javascript:void(0)" data-index="5">Web Base / Server System Deployment</a></li>
             </ul>
         </nav>
 
@@ -102,44 +101,146 @@
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Laptop / Computer Services</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
                         <a href="#" class="learn-more-link">Learn More &rarr;</a>
                     </div>
                     <div class="slide-image">
-                        <img src="laptop-image.jpg" alt="Laptop Repair">
+                        <img src="/DJV-Website/Assets/laptop 1.png" alt="Laptop Repair">
                     </div>
                 </div>
 
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Printer Services</h3>
-                        <p>Professional printer repair and maintenance for all major brands and models.</p>
+                        <p>Professional printer repair and maintenance for all major brands.</p>
                         <a href="#" class="learn-more-link">Learn More &rarr;</a>
                     </div>
                     <div class="slide-image">
-                        <img src="printer-image.jpg" alt="Printer">
+                        <img src="/DJV-Website/Assets/printer.png" alt="Printer">
                     </div>
                 </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Printer Services</h3>
+                        <p>Professional printer repair and maintenance for all major brands.</p>
+                        <a href="#" class="learn-more-link">Learn More &rarr;</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="/DJV-Website/Assets/cctv.png" alt="Printer">
+                    </div>
+                </div>
+
             </div>
 
             <button class="arrow right-arrow" onclick="scrollSlider(1)">&#10095;</button>
         </div>
 
-
     </section>
+    <footer class="footer">
 
-    <!--Script for Hamburger Menu-->
+        <div class="footer-content">
+
+            <!-- Column 1: Logo + Social Media -->
+            <div class="footer-col">
+                <img src="/DJV-Website/Assets/LOGO FOOTER.png" alt="Logo Footer" style="width:150px; display:block; margin-bottom:20px;">
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/djvitsolution" target="_blank">
+                        <img class="social-fb" src="/DJV-Website/Assets/Facebook-Icon.svg" alt="DJV FB">
+                    </a>
+                    <a href="https://www.instagram.com/djvitsolutions/" target="_blank">
+                        <img class="social-ig" src="/DJV-Website/Assets/Instagram-Icon.svg" alt="DJV IG">
+                    </a>
+                    <a href="https://www.tiktok.com/@djvitsolutions" target="_blank">
+                        <img class="social-tiktok" src="/DJV-Website/Assets/Tiktok-Icon.svg" alt="DJV TikTok">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="About_Page.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Technical Support</a></li>
+                    <li><a href="#">Submit a Ticket</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4-->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            2026 DJV IT Solutions. All Rights Reserved.
+        </div>
+
+    </footer>
     <script>
+        // 1. Hamburger Menu Logic
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+
+        // 2. Slider Arrow Logic
+        function scrollSlider(direction) {
+            const slider = document.getElementById('slider');
+            // Scrolls by the width of the visible area
+            const scrollAmount = slider.clientWidth;
+
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // 3. Services Navigation Logic (Connecting Nav to Slider)
+        const serviceLinks = document.querySelectorAll('.services-nav a');
+        const sliderWrapper = document.getElementById('slider');
+
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove 'active' class from all links
+                serviceLinks.forEach(item => item.classList.remove('active'));
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+
+                // Get index and scroll to that specific slide
+                const index = this.getAttribute('data-index');
+                const slideWidth = sliderWrapper.clientWidth;
+
+                sliderWrapper.scrollTo({
+                    left: index * slideWidth,
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 
-
-</body>
 </body>
 
 </html>
