@@ -6,26 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>DJV IT Solutions</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
-    <link rel="icon" type="image/x-icon" href="/DJV-Website/Assets/ICON_FINAL.svg">
+    <link rel="icon" type="image/x-icon" href="/Development/Assets/ICON_FINAL.ico">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Assets/ICON_FINAL.png">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="Landing_Page.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
     <header>
         <section class="hero">
+
             <nav class="navbar">
 
                 <div class="brand">
-                    <img src="/DJV-Website/Assets/ICON_FINAL.png" class="logo">
-                    <img src="/DJV-Website/Assets/Dark-Text-Logo.png" class="brand-text">
+                    <img src="Assets/ICON_FINAL.png" class="logo" alt="DJV Logo">
+                    <img src="Assets/Dark-Text-Logo.png" class="brand-text" alt="DJV IT Solutions">
                 </div>
 
                 <!-- Hamburger Menu -->
@@ -37,22 +41,22 @@
                     <li><a href="About_Page.html">About</a></li>
                     <li><a href="Contact_Us_Page.html">Contact Us</a></li>
 
-                    <!-- Social media links -->
+                    <!-- Social media -->
                     <li class="social">
                         <a href="https://www.facebook.com/djvitsolution" target="_blank">
-                            <img class="social-fb" src="/DJV-Website/Assets/Facebook-Icon.svg" alt="Djv IT Solutions fb">
+                            <img src="Assets/Facebook-Icon.svg" class="social-fb" alt="Facebook">
                         </a>
                     </li>
 
                     <li class="social">
                         <a href="https://www.instagram.com/djvitsolutions/" target="_blank">
-                            <img class="social-ig" src="/DJV-Website/Assets/Instagram-Icon.svg" alt="Djv IT Solutions ig">
+                            <img src="Assets/Instagram-Icon.svg" class="social-ig" alt="Instagram">
                         </a>
                     </li>
 
                     <li class="social">
                         <a href="https://www.tiktok.com/@djvitsolutions" target="_blank">
-                            <img class="social-tiktok" src="/DJV-Website/Assets/Tiktok-Icon.svg" alt="Djv IT Solutions tiktok">
+                            <img src="Assets/Tiktok-Icon.svg" class="social-tiktok" alt="TikTok">
                         </a>
                     </li>
 
@@ -62,8 +66,10 @@
                 </ul>
 
             </nav>
+
     </header>
 
+    <!-- HERO TEXT -->
     <div class="welcome-text">
         <h1>Empowering Your</h1>
     </div>
@@ -71,13 +77,12 @@
     <div class="welcome-subtext">
         <h2>Technology Solutions</h2>
     </div>
-    <a href="Services_Page.html">
-        <button class="custom-btn">Get Started</button>
-    </a>
-    <a href="About_Page.html">
-        <button class="text-button">Learn More</button>
-    </a>
+
+    <a href="Services_Page.html" class="custom-btn">Get Started</a>
+    <a href="About_Page.html" class="text-button">Learn More</a>
+
     </section>
+
 
     <section class="services">
         <h3>Our Services</h3>
@@ -85,12 +90,12 @@
 
         <nav class="services-nav">
             <ul>
-                <li><a href="javascript:void(0)" class="active" data-index="0">Laptop / Computer Services</a></li>
-                <li><a href="javascript:void(0)" data-index="1">Printer Services</a></li>
-                <li><a href="javascript:void(0)" data-index="2">CCTV Services</a></li>
-                <li><a href="javascript:void(0)" data-index="3">Network / IP / PBX Services</a></li>
-                <li><a href="javascript:void(0)" data-index="4">IT Consultancy</a></li>
-                <li><a href="javascript:void(0)" data-index="5">Web Base / Server System Deployment</a></li>
+                <li><a href="#" class="active" data-index="0">Laptop / Computer Services</a></li>
+                <li><a href="#" data-index="1">Printer Services</a></li>
+                <li><a href="#" data-index="2">CCTV Services</a></li>
+                <li><a href="#" data-index="3">Network / IP / PBX Services</a></li>
+                <li><a href="#" data-index="4">IT Consultancy</a></li>
+                <li><a href="#" data-index="5">Web Base / Server System Deployment</a></li>
             </ul>
         </nav>
 
@@ -98,14 +103,16 @@
             <button class="arrow left-arrow" onclick="scrollSlider(-1)">&#10094;</button>
 
             <div class="slider-wrapper" id="slider">
+
+                <!-- SLIDES -->
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Laptop / Computer Services</h3>
-
-                        <a href="#" class="learn-more-link">Learn More &rarr;</a>
+                        <p>Professional laptop and computer repair and maintenance for all major brands.</p>
+                        <a href="#" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="/DJV-Website/Assets/laptop 1.png" alt="Laptop Repair">
+                        <img src="Assets/laptop1.png" alt="Laptop Repair">
                     </div>
                 </div>
 
@@ -113,20 +120,54 @@
                     <div class="slide-content">
                         <h3>Printer Services</h3>
                         <p>Professional printer repair and maintenance for all major brands.</p>
-                        <a href="#" class="learn-more-link">Learn More &rarr;</a>
+                        <a href="#" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="/DJV-Website/Assets/printer.png" alt="Printer">
+                        <img src="Assets/printer.png" alt="Printer">
                     </div>
                 </div>
+
                 <div class="slide">
                     <div class="slide-content">
-                        <h3>Printer Services</h3>
-                        <p>Professional printer repair and maintenance for all major brands.</p>
-                        <a href="#" class="learn-more-link">Learn More &rarr;</a>
+                        <h3>CCTV Services</h3>
+                        <p>Professional CCTV installation and maintenance.</p>
+                        <a href="#" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="/DJV-Website/Assets/cctv.png" alt="Printer">
+                        <img src="Assets/cctv.png" alt="CCTV">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Network / IP / PBX Services</h3>
+                        <p>Complete network infrastructure and IP telephony.</p>
+                        <a href="#" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/network.png" alt="Network">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>IT Consultancy</h3>
+                        <p>Expert IT consulting services.</p>
+                        <a href="#" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/consultancy.png" alt="Consultancy">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Web Base / Server Deployment</h3>
+                        <p>Professional server deployment and support.</p>
+                        <a href="#" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/server.png" alt="Server">
                     </div>
                 </div>
 
@@ -134,25 +175,25 @@
 
             <button class="arrow right-arrow" onclick="scrollSlider(1)">&#10095;</button>
         </div>
-
     </section>
+
     <footer class="footer">
 
         <div class="footer-content">
 
             <!-- Column 1: Logo + Social Media -->
             <div class="footer-col">
-                <img src="/DJV-Website/Assets/LOGO FOOTER.png" alt="Logo Footer" style="width:150px; display:block; margin-bottom:20px;">
+                <img src="Assets/LOGO FOOTER.png" alt="Logo Footer" style="width:150px; display:block; margin-bottom:20px;">
 
                 <div class="social-icons">
                     <a href="https://www.facebook.com/djvitsolution" target="_blank">
-                        <img class="social-fb" src="/DJV-Website/Assets/Facebook-Icon.svg" alt="DJV FB">
+                        <img class="social-fb" src="Assets/Facebook-Icon.svg" alt="DJV FB">
                     </a>
                     <a href="https://www.instagram.com/djvitsolutions/" target="_blank">
-                        <img class="social-ig" src="/DJV-Website/Assets/Instagram-Icon.svg" alt="DJV IG">
+                        <img class="social-ig" src="Assets/Instagram-Icon.svg" alt="DJV IG">
                     </a>
                     <a href="https://www.tiktok.com/@djvitsolutions" target="_blank">
-                        <img class="social-tiktok" src="/DJV-Website/Assets/Tiktok-Icon.svg" alt="DJV TikTok">
+                        <img class="social-tiktok" src="Assets/Tiktok-Icon.svg" alt="DJV TikTok">
                     </a>
                 </div>
             </div>
@@ -193,45 +234,50 @@
         </div>
 
         <div class="footer-bottom">
-            2026 DJV IT Solutions. All Rights Reserved.
+            @2026 DJV IT Solutions. All Rights Reserved.
         </div>
 
     </footer>
+
+
+
     <script>
-        // 1. Hamburger Menu Logic
+        // Hamburger Menu
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
-        // 2. Slider Arrow Logic
+        // Slider arrows
         function scrollSlider(direction) {
             const slider = document.getElementById('slider');
-            // Scrolls by the width of the visible area
-            const scrollAmount = slider.clientWidth;
+            const slide = slider.querySelector('.slide');
+            const slideWidth = slide.clientWidth;
 
             slider.scrollBy({
-                left: direction * scrollAmount,
+                left: direction * slideWidth,
                 behavior: 'smooth'
             });
         }
 
-        // 3. Services Navigation Logic (Connecting Nav to Slider)
+        // Services nav → slider
         const serviceLinks = document.querySelectorAll('.services-nav a');
         const sliderWrapper = document.getElementById('slider');
 
         serviceLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                // Remove 'active' class from all links
-                serviceLinks.forEach(item => item.classList.remove('active'));
-                // Add 'active' class to the clicked link
-                this.classList.add('active');
+            link.addEventListener('click', e => {
+                e.preventDefault();
 
-                // Get index and scroll to that specific slide
-                const index = this.getAttribute('data-index');
-                const slideWidth = sliderWrapper.clientWidth;
+                serviceLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                const index = Number(link.dataset.index);
+                const slide = sliderWrapper.querySelector('.slide');
+                const slideWidth = slide.clientWidth;
 
                 sliderWrapper.scrollTo({
                     left: index * slideWidth,

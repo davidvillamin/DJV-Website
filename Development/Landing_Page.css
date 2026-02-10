@@ -1,6 +1,7 @@
 html {
     scroll-behavior: initial;
-    scroll-snap-type: y mandatory; /* Changed to 'y' for vertical snapping */
+    scroll-snap-type: y mandatory;
+    /* Changed to 'y' for vertical snapping */
 }
 
 * {
@@ -11,7 +12,8 @@ html {
 
 body {
     font-family: "Radio Canada Big", sans-serif;
-    display: flex; /* Required for flex-direction to work */
+    display: flex;
+    /* Required for flex-direction to work */
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
@@ -24,7 +26,8 @@ body {
 section {
     height: 100vh;
     scroll-snap-align: start;
-    position: relative; /* Helps keep absolute elements inside the section */
+    position: relative;
+    /* Helps keep absolute elements inside the section */
 }
 
 
@@ -146,8 +149,7 @@ section {
     transform: translateY(-1px);
 }
 
-
-.welcome-text > h1 {
+.welcome-text>h1 {
     font-size: 80px;
     font-weight: 300;
     color: white;
@@ -160,7 +162,7 @@ section {
     width: 100%;
 }
 
-.welcome-subtext > h2{
+.welcome-subtext>h2 {
     text-align: center;
     color: white;
     font-weight: 100;
@@ -190,14 +192,15 @@ section {
     display: none;
 }
 
-.services h3{
+.services h3 {
     color: #003D81;
     font-size: 50px;
     font-weight: 300;
     text-align: center;
     font: radio big canada;
 }
-.services h4{
+
+.services h4 {
     color: white;
     font-size: 21.5px;
     font-weight: 300;
@@ -206,7 +209,10 @@ section {
     position: relative;
     bottom: 330px;
 }
+
+
 /* Get Started and Learn more btn*/
+
 .custom-btn {
     padding: 12px 24px;
     font-size: 16px;
@@ -223,9 +229,8 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.custom-btn:hover{
+.custom-btn:hover {
     background-color: #0F5D99;
-
 }
 
 .text-button {
@@ -242,21 +247,27 @@ section {
     /* Animation */
     transition: all 0.3s ease;
 }
+
 .text-button:hover {
     background-color: white;
     color: #0F5D99;
     border: 2px solid transparent;
 }
+
+
 /* Service Section */
+
 .services-nav {
     width: 100%;
     padding: 20px 0;
-    border-top: 1px solid #eee; /* Light divider line */
+    border-top: 1px solid #eee;
+    /* Light divider line */
 }
 
 .services-nav ul {
     display: flex;
-    justify-content: space-around; /* Spreads links evenly */
+    justify-content: space-around;
+    /* Spreads links evenly */
     list-style: none;
     padding: 0 40px;
 }
@@ -266,7 +277,8 @@ section {
     font-family: "Radio Canada Big", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #999; /* Inactive gray color */
+    color: #999;
+    /* Inactive gray color */
     text-align: center;
     padding: 10px 0;
     transition: 0.3s;
@@ -274,48 +286,64 @@ section {
     position: relative;
 }
 
+
 /* The blue line at the top for the active/hovered tab */
+
 .services-nav a.active::before,
 .services-nav a:hover::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust based on your padding to sit at the very top */
+    top: -20px;
+    /* Adjust based on your padding to sit at the very top */
     left: 0;
     width: 100%;
     height: 4px;
     background-color: #2683EB;
 }
 
+
 /* Active and Hover State colors */
+
 .services-nav a.active,
 .services-nav a:hover {
     color: #00497F;
 }
 
+
 /* This is the parent window */
+
 .slider-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
+
 /* This is the element that actually scrolls */
+
 .slider-wrapper {
     display: flex;
-    overflow-x: auto; /* Allows scrolling */
+    overflow-x: auto;
+    /* Allows scrolling */
     scroll-behavior: smooth;
-    -ms-overflow-style: none;  /* Hides scrollbar for IE/Edge */
-    scrollbar-width: none;  /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hides scrollbar for IE/Edge */
+    scrollbar-width: none;
+    /* Hides scrollbar for Firefox */
 }
 
+
 /* Hides scrollbar for Chrome/Safari */
+
 .slider-wrapper::-webkit-scrollbar {
     display: none;
 }
 
+
 /* Ensure each slide takes up the full width of the wrapper */
+
 .slide {
-    min-width: 100%; 
+    min-width: 100%;
     display: flex;
     flex-shrink: 0;
 }
@@ -334,12 +362,15 @@ section {
 }
 
 .slide-image img {
-    width: 450px; /* Matches your layout image */
+    width: 450px;
+    /* Matches your layout image */
     height: auto;
     border-radius: 4px;
 }
 
+
 /* Arrow Buttons */
+
 .arrow {
     background: white;
     border: 1px solid #ddd;
@@ -364,6 +395,8 @@ section {
     font-weight: bold;
     font-family: "Radio Canada Big", sans-serif;
 }
+
+
 /* MOBILE */
 
 @media (max-width: 600px) {
@@ -451,10 +484,12 @@ section {
     }
 }
 
+
 /* FOOTER */
 
 .footer {
-    scroll-snap-align: end; /* This tells the snap engine to stop here */
+    scroll-snap-align: end;
+    /* This tells the snap engine to stop here */
     background-color: #6C6C6C;
     color: white;
     padding: 60px 20px 30px 20px;
@@ -475,27 +510,50 @@ section {
     min-width: 200px;
 }
 
+
 /* Fix: Alignment for the Logo Column */
+
 .footer-col:first-child {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Changed from center to flex-start for a cleaner grid look */
+    align-items: flex-start;
+    /* Changed from center to flex-start for a cleaner grid look */
 }
 
-/* Social Icons Layout */
-.social-icons {
+.footer .social-icons {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: -20px;
 }
 
-.social-icons img {
-    width: 24px;
-    transition: transform 0.3s ease;
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* normal background */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    /* smooth hover transition */
 }
 
-.social-icons img:hover {
-    transform: translateY(-3px);
+.social-fb:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-ig:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-tiktok:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
 }
 
 .footer-col h4 {
@@ -523,11 +581,16 @@ section {
     transition: all 0.3s ease;
 }
 
+
 /* Fix: Text Gradient Hover */
+
+
 /* Standard backgrounds don't work on text links; this is the correct way: */
+
 .footer-col ul li a:hover {
     color: #ffffff;
-    padding-left: 5px; /* Subtle movement effect */
+    padding-left: 5px;
+    /* Subtle movement effect */
 }
 
 .footer-bottom {
@@ -536,11 +599,14 @@ section {
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
-    text-align: center; /* Centered looks more balanced for copyright */
+    text-align: center;
+    /* Centered looks more balanced for copyright */
     color: rgba(255, 255, 255, 0.6);
 }
 
+
 /* Mobile Responsiveness */
+
 @media (max-width: 768px) {
     .footer-col {
         min-width: 100%;
