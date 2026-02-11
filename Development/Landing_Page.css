@@ -43,6 +43,8 @@ section {
     padding: 20px 20px;
     /* adjust the black background */
     overflow: hidden;
+    position: sticky;
+    z-index: 1000;
 }
 
 
@@ -395,6 +397,47 @@ section {
     font-weight: bold;
     font-family: "Radio Canada Big", sans-serif;
 }
+/*Map Container and section*/ 
+
+.map-section {
+    min-height: 100vh; /* Changed from height to min-height for safety */
+    width: 100%;
+    scroll-snap-align: start;
+    background-color: #f9f9f9;
+    position: relative; /* Ensure it stays in the document flow */
+    
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: center;
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    padding: 40px 0;
+}
+
+/* Explicitly style the iframe so it shows up */
+.map-container iframe {
+    width: 300%;
+    height: 500px; /* Essential: iframes need a height to be visible */
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.map-container h2 {
+    font-family: "Radio Canada Big", sans-serif;
+    color: #003D81;
+    font-size: 40px;
+    margin: 0;
+    order: -1; /* This moves the text ABOVE the map visually */
+}
 
 
 /* MOBILE */
@@ -488,12 +531,13 @@ section {
 /* FOOTER */
 
 .footer {
-    scroll-snap-align: end;
-    /* This tells the snap engine to stop here */
+    scroll-snap-align: end; 
     background-color: #6C6C6C;
     color: white;
-    padding: 60px 20px 30px 20px;
-    font-family: 'Radio Canada Big', sans-serif;
+    padding: 60px 20px;
+    width: 100%;
+    position: relative; /* Ensures it stays in document flow */
+    clear: both; /* Safety measure against floats */
 }
 
 .footer-content {
