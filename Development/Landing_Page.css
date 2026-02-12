@@ -433,15 +433,18 @@ section {
     font-weight: bold;
     font-family: "Radio Canada Big", sans-serif;
 }
-/*Map Container and section*/ 
+
+
+/*Map Container and section*/
 
 .map-section {
-    min-height: 100vh; /* Changed from height to min-height for safety */
+    min-height: 100vh;
+    /* Changed from height to min-height for safety */
     width: 100%;
     scroll-snap-align: start;
     background-color: #f9f9f9;
-    position: relative; /* Ensure it stays in the document flow */
-    
+    position: relative;
+    /* Ensure it stays in the document flow */
     /* Layout */
     display: flex;
     justify-content: center;
@@ -458,13 +461,16 @@ section {
     padding: 40px 0;
 }
 
+
 /* Explicitly style the iframe so it shows up */
+
 .map-container iframe {
     width: 300%;
-    height: 500px; /* Essential: iframes need a height to be visible */
+    height: 500px;
+    /* Essential: iframes need a height to be visible */
     border-radius: 12px;
     border: none;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .map-container h2 {
@@ -472,7 +478,197 @@ section {
     color: #003D81;
     font-size: 40px;
     margin: 0;
-    order: -1; /* This moves the text ABOVE the map visually */
+    order: -1;
+    /* This moves the text ABOVE the map visually */
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #6C6C6C;
+    color: white;
+    padding: 60px 20px 30px;
+    font-family: 'Radio Canada Big', sans-serif;
+}
+
+
+/* GRID LAYOUT */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+
+/* COLUMN */
+
+.footer-col {
+    min-width: 100;
+}
+
+
+/* Logo column */
+
+.footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Social icons */
+
+.footer .social-icons {
+    display: flex;
+    gap: 18px;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Adjust Margin of social med icons*/
+
+.footer .social-icons {
+    display: flex;
+    gap: 15px;
+    height: 24px;
+    width: 24px;
+    margin-top: -20px;
+    margin-left: 25px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    /* Increased slightly for better fit */
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.footer .social-icons i {
+    font-size: 22px;
+}
+
+.social-fb,
+.social-ig,
+.social-tiktok {
+    font-size: 24px;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Facebook */
+
+.footer .social-icons a:hover .social-fb {
+    color: #1877F2;
+}
+
+
+/* Instagram */
+
+.footer .social-icons a:hover .social-ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285ae1 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* TikTok */
+
+.footer .social-icons a:hover .social-tiktok {
+    color: #000;
+}
+
+
+/* Headings */
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+
+/* Lists */
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+
+/* Links */
+
+.footer-col a {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: white;
+    padding-left: 4px;
+}
+
+
+/* Contact text */
+
+.footer-col ul li span {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* Bottom copyright */
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -557,135 +753,11 @@ section {
         color: white;
         font-weight: 300;
         font-size: 30px;
-        font-family: "Radio Big Canada";
+        font-family: 'Radio Big Canada';
         margin: 0 auto 50px auto;
         width: 100%;
     }
 }
-
-
-/* FOOTER */
-
-.footer {
-    scroll-snap-align: end; 
-    background-color: #6C6C6C;
-    color: white;
-    padding: 60px 20px;
-    width: 100%;
-    position: relative; /* Ensures it stays in document flow */
-    clear: both; /* Safety measure against floats */
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-}
-
-
-/* Fix: Alignment for the Logo Column */
-
-.footer-col:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Changed from center to flex-start for a cleaner grid look */
-}
-
-.footer .social-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: -20px;
-}
-
-.footer .social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    /* normal background */
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    /* smooth hover transition */
-}
-
-.social-fb:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-.social-ig:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-.social-tiktok:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col a {
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-
-/* Fix: Text Gradient Hover */
-
-
-/* Standard backgrounds don't work on text links; this is the correct way: */
-
-.footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 5px;
-    /* Subtle movement effect */
-}
-
-.footer-bottom {
-    max-width: 1200px;
-    margin: 50px auto 0;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-    text-align: center;
-    /* Centered looks more balanced for copyright */
-    color: rgba(255, 255, 255, 0.6);
-}
-
-
-/* Mobile Responsiveness */
 
 @media (max-width: 768px) {
     .footer-col {
