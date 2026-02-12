@@ -171,9 +171,7 @@ body {
 .menu-toggle {
     display: none;
 }
-
-
-/* HERO SECTION */
+/* LANDING PAGE */ 
 
 .LandingP-Hero {
     color: white;
@@ -197,8 +195,66 @@ body {
 .hero-content p {
     transform: translateX(25px);
 }
-/* Landing Page */ 
 
+.LandingP-welcometxt {
+    font-size: 80px;
+    font-weight: 300;
+    color: white;
+    font-family: "Source Serif Pro";
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    
+}
+#test{
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Landing-Welcome-Subtxt {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 80px;
+    font-family: "Radio Canada Big", sans-serif;
+    position: absolute;
+    left: 380px;
+    top: 310px;
+}
+
+.LandingP-custom-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #2683EB;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 495px;
+    left: 600px;
+    /* Animation */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}   
+.LandingP-text-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 495px;
+    left: 750px;
+    /* Animation */
+    transition: all 0.3s ease;
+}
 
 /* ================= FOOTER ================= */
 
