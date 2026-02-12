@@ -175,27 +175,19 @@ body {
 
 /* HERO SECTION */
 
-.hero {
-    min-height: calc(100svh - 64px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-content {
+.LandingP-Hero {
     color: white;
     max-width: 600px;
     padding: 20px;
 }
 
-.hero-content h2 {
+.LandingP-Hero h2 {
     font-weight: 100;
     font-size: 80px;
     margin-bottom: 20px;
 }
 
-.hero-content p {
+.LandingP-Hero p {
     font-weight: 100;
     font-size: 20px;
     line-height: 1.6;
@@ -205,6 +197,7 @@ body {
 .hero-content p {
     transform: translateX(25px);
 }
+/* Landing Page */ 
 
 
 /* ================= FOOTER ================= */
