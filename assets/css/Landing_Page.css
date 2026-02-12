@@ -79,31 +79,7 @@ section {
 
 /* NAV LINKS */
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 18px;
-    align-items: center;
-}
 
-.nav-links a:hover {
-    color: #2683EB;
-}
-
-.nav-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    gap: 18px;
-    padding: 6px 6px;
-    transition: 0.3s;
-}
-
-.nav-links.active {
-    display: flex;
-}
 
 
 /* Social Media Links */
