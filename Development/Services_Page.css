@@ -30,6 +30,9 @@ body {
     padding: 20px 20px;
     /* adjust the black background */
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 
@@ -280,84 +283,143 @@ body {
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .footer {
-    scroll-snap-align: end;
-    /* This tells the snap engine to stop here */
     background-color: #6C6C6C;
     color: white;
-    padding: 60px 20px 30px 20px;
+    padding: 60px 20px 30px;
     font-family: 'Radio Canada Big', sans-serif;
 }
 
+
+/* GRID LAYOUT */
+
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1.5fr;
+    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
 }
+
+
+/* COLUMN */
 
 .footer-col {
-    flex: 1;
-    min-width: 200px;
+    min-width: 100;
 }
 
 
-/* Fix: Alignment for the Logo Column */
+/* Logo column */
 
 .footer-col:first-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Changed from center to flex-start for a cleaner grid look */
 }
+
+
+/* Social icons */
 
 .footer .social-icons {
     display: flex;
-    gap: 10px;
-    margin-top: -20px;
+    gap: 18px;
+    margin-left: 0;
+    margin-top: 20px;
 }
 
 .footer .social-icons a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* normal background */
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Adjust Margin of social med icons*/
+
+.footer .social-icons {
+    display: flex;
+    gap: 15px;
+    height: 24px;
+    width: 24px;
+    margin-top: -20px;
+    margin-left: 25px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    /* Increased slightly for better fit */
+    height: 35px;
     border-radius: 50%;
     color: white;
-    font-size: 14px;
     text-decoration: none;
     transition: background 0.3s ease;
-    /* smooth hover transition */
 }
 
-.social-fb:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+.footer .social-icons i {
+    font-size: 22px;
 }
 
-.social-ig:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+.social-fb,
+.social-ig,
+.social-tiktok {
+    font-size: 24px;
 }
 
-.social-tiktok:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
 }
+
+
+/* Facebook */
+
+.footer .social-icons a:hover .social-fb {
+    color: #1877F2;
+}
+
+
+/* Instagram */
+
+.footer .social-icons a:hover .social-ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285ae1 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* TikTok */
+
+.footer .social-icons a:hover .social-tiktok {
+    color: #000;
+}
+
+
+/* Headings */
 
 .footer-col h4 {
     font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-weight: 500;
 }
+
+
+/* Lists */
 
 .footer-col ul {
     list-style: none;
@@ -366,36 +428,46 @@ body {
 }
 
 .footer-col ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     margin-bottom: 12px;
 }
 
+
+/* Links */
+
 .footer-col a {
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: white;
+    padding-left: 4px;
 }
 
 
-/* Fix: Text Gradient Hover */
+/* Contact text */
 
-
-/* Standard backgrounds don't work on text links; this is the correct way: */
-
-.footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 5px;
-    /* Subtle movement effect */
+.footer-col ul li span {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
 }
+
+
+/* Bottom copyright */
 
 .footer-bottom {
-    max-width: 1200px;
-    margin: 50px auto 0;
-    padding: 20px 0;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
-    text-align: center;
-    /* Centered looks more balanced for copyright */
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -533,11 +605,14 @@ body {
     }
     /* Logo + social icons */
     .footer-col:first-child {
-        align-items: center;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
     .footer .social-icons {
-        margin-top: 15px;
         justify-content: center;
+        margin-top: auto;
     }
     /* Section titles */
     .footer-col h4 {
