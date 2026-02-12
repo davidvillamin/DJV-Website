@@ -1,0 +1,233 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <!-- HERO TEXT -->
+        <div class="welcome-text">
+            <h1>Empowering Your</h1>
+        </div>
+
+        <div class="welcome-subtext">
+            <h2>Technology Solutions</h2>
+        </div>
+
+        <a href="Services_Page.html" class="custom-btn">Get Started</a>
+        <a href="About_Page.html" class="text-button">Learn More</a>
+    </section>
+
+
+    <section class="services">
+        <h3>Our Services</h3>
+        <h4>Reliable services for businesses and individuals to stay connected and secure.</h4>
+
+        <nav class="services-nav">
+            <ul>
+                <li><a href="#" class="active" data-index="0">Laptop / Computer Services</a></li>
+                <li><a href="#" data-index="1">Printer Services</a></li>
+                <li><a href="#" data-index="2">CCTV Services</a></li>
+                <li><a href="#" data-index="3">Network / IP / PBX Services</a></li>
+                <li><a href="#" data-index="4">IT Consultancy</a></li>
+                <li><a href="#" data-index="5">Web Base / Server System Deployment</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider-container">
+            <button class="arrow left-arrow" onclick="scrollSlider(-1)">&#10094;</button>
+
+            <div class="slider-wrapper" id="slider">
+
+                <!-- SLIDES -->
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Laptop / Computer<br>Services</h3>
+                        <p>We provide end-to-end support for laptops and computers,<br>boosting performance, minimizing downtime,<br> and extending equipment life.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/laptop1.png" alt="Laptop Repair">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Printer Services</h3>
+                        <p>We provide reliable printer and copier support that streamlines<br> document management, cuts costs, and keeps your office<br> running at peak performance.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/printer.png" alt="Printer">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>CCTV Services</h3>
+                        <p>We deliver comprehensive planning, professional installation, and reliable<br> maintenance of CCTV systems, strengthening site security, enhancing<br> monitoring capabilities, and providing greater operational control.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/cctv.png" alt="CCTV">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Network / IP / PBX Services</h3>
+                        <p>We specialize in the design, installation, and configuration of secure network and <br> IP-PBX systems to support reliable connectivity, efficient communication, <br>1and scalable solutions that empower business growth.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/it.png" alt="Network">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>IT Consultancy</h3>
+                        <p>We provide strategic IT consultancy that minimizes downtime, strengthens security,<br>and supports scalable growth.Our clear, actionable solutions simplify complex technology,<br> helping decision-makers move forward with confidence.
+                            Even a short consultation<br> can reveal hidden gaps, risks, and opportunities.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/guy-laptop.png" alt="Consultancy">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <h3>Web Base / Server Deployment</h3>
+                        <p>We handle the creation, deployment, and configuration of web-based and server systems,<br> ensuring reliable business applications, efficient data management,<br> and system stability aligned with operational needs.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="Assets/network.png" alt="Server">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button class="arrow right-arrow" onclick="scrollSlider(1)">&#10095;</button>
+        </div>
+    </section>
+    <!-- Map Container -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.3364730442195!2d120.90920037467713!3d14.29187238615875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d55fb430c175%3A0x22d5b6330723452a!2sDJV%20IT%20Solutions!5e0!3m2!1sen!2sph!4v1770711423527!5m2!1sen!2sph"
+                allowfullscreen="" loading="lazy"></iframe>
+            <h2>LOCATE US</h2>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- Column 1: Logo + Social Media -->
+            <div class="footer-col">
+                <img src="Assets/LOGO FOOTER.png" alt="Logo Footer" style="width:150px; display:block; margin-bottom:20px;">
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/djvitsolution" target="_blank">
+                        <i class="bi bi-facebook social-fb" aria-label="DJV FB"></i>
+                    </a>
+                    <a href="https://www.instagram.com/djvitsolutions/" target="_blank">
+                        <i class="bi bi-instagram social-ig" aria-label="DJV IG"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@djvitsolutions" target="_blank">
+                        <i class="bi bi-tiktok social-tiktok" aria-label="DJV tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="About_Page.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Technical Support</a></li>
+                    <li><a href="#">Submit a Ticket</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4-->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <!--column 5-->
+            <div class="footer-col">
+
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        <span>(046) 514 1514</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a href="mailto:office.djvitsolutions@gmail.com">office.djvitsolutions@gmail.com</a></span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <a href="https://maps.app.goo.gl/vBmaQVTAAgTP5dVu7" target="_blank" rel="noopener noreferrer">
+        Brgy. Arnaldo Hwy, Manggahan, General Trias, 4107 Cavite
+    </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                @2026 DJV IT Solutions. All Rights Reserved.
+            </div>
+
+    </footer>
+
+<%- include("partials/script") %>
+<!-- special script -->
+<script src="/assets/js/Landing_Page.js"></script>
+<%- include("partials/footer") %>
