@@ -44,6 +44,7 @@ section {
     /* adjust the black background */
     overflow: hidden;
     position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -261,56 +262,49 @@ section {
 
 .services-nav {
     width: 100%;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
+    padding: 10px 100px;
+    
     /* Light divider line */
 }
 
+/* The Navigation Container */
 .services-nav ul {
     display: flex;
-    justify-content: space-around;
-    /* Spreads links evenly */
+    justify-content: space-between;
     list-style: none;
-    padding: 0 40px;
+    padding: 0;
+    margin: 0 0 30px 0;
+    border: none;
 }
 
+/* Base style for the items */
+.services-nav li {
+    flex: 1; /* Ensures each section takes up equal width */
+    text-align: center;
+}
+
+/* The Link style */
 .services-nav a {
     text-decoration: none;
-    font-family: "Radio Canada Big", sans-serif;
     font-size: 14px;
-    font-weight: 600;
-    color: #999;
-    /* Inactive gray color */
-    text-align: center;
-    padding: 10px 0;
-    transition: 0.3s;
-    display: block;
-    position: relative;
+    color: #b0b0b0; /* Light gray for inactive text */
+    padding-top: 15px; /* Gap between line and text */
+    display: block; /* Makes the link/border fill the flex area */
+    transition: all 0.3s ease;
+    border-top: 4px solid #f0f0f0; /* Light gray base line for all */
 }
 
-
-/* The blue line at the top for the active/hovered tab */
-
-.services-nav a.active::before,
-.services-nav a:hover::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    /* Adjust based on your padding to sit at the very top */
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #2683EB;
+/* The Active State (Matches your screenshot) */
+.services-nav a.active {
+    color: #004a99; /* Bold dark blue text */
+    font-weight: 700;
+    border-top: 4px solid #85c1e9; /* Light blue bar on top */
 }
 
-
-/* Active and Hover State colors */
-
-.services-nav a.active,
+/* Optional: Hover effect */
 .services-nav a:hover {
-    color: #00497F;
+    color: #004a99;
 }
-
 
 /* This is the parent window */
 
@@ -363,35 +357,77 @@ section {
     flex: 1;
 }
 
+.slide-content h3 {
+        font-family: "Radio Canada Big", sans-serif;
+        font-size: 40px;
+        text-align: left;
+        color: black;
+        margin-bottom: 20%;
+        margin-left: 10%;
+}
+
+.slide-content p {
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: #333;
+    position: relative;
+    bottom: 180px;
+    left: 10%;
+}
+
+
 .slide-image img {
     width: 450px;
     /* Matches your layout image */
     height: auto;
     border-radius: 4px;
+    position: relative;
+    right: 20%;
+    bottom: 40px;
 }
 
 
-/* Arrow Buttons */
+/* Arrow Buttons  */
 
 .arrow {
     background: white;
     border: 1px solid #ddd;
     color: #2683EB;
-    font-size: 24px;
-    padding: 10px 15px;
+    
+    /* 1. RESIZE: Smaller font and less padding makes the button smaller */
+    font-size: 18px; 
+    padding: 6px 10px; 
+    
     cursor: pointer;
     border-radius: 4px;
     z-index: 10;
     transition: 0.3s;
+
+    /* 2. POSITIONING: Absolute allows them to sit 'on top' of the content */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centers them vertically */
+}
+
+/* 3. MOVE CLOSER: Adjust these 'px' values to move them inward */
+.left-arrow {
+    left: 40px; /* Increase this number to move it closer to the text */
+}
+
+.right-arrow {
+    right: 40px; /* Increase this number to move it closer to the image */
 }
 
 .arrow:hover {
     background-color: #f0f7ff;
+    border-color: #2683EB;
 }
 
 .learn-more-link {
-    display: inline-block;
-    margin-top: 20px;
+    position: relative;
+    bottom: 150px;
+    left: 10%;
     text-decoration: none;
     color: #000;
     font-weight: bold;

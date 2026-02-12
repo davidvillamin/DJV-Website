@@ -107,9 +107,9 @@
                 <!-- SLIDES -->
                 <div class="slide">
                     <div class="slide-content">
-                        <h3>Laptop / Computer Services</h3>
-                        <p>We provide end-to-end support for laptops and computers,<br>boosting performance, minimizing downtime, and extending equipment life.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <h3>Laptop / Computer<br>Services</h3>
+                        <p>We provide end-to-end support for laptops and computers,<br>boosting performance, minimizing downtime,<br> and extending equipment life.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
                         <img src="Assets/laptop1.png" alt="Laptop Repair">
@@ -119,8 +119,8 @@
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Printer Services</h3>
-                        <p>Professional printer repair and maintenance for all major brands.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <p>We provide reliable printer and copier support that streamlines<br> document management, cuts costs, and keeps your office<br> running at peak performance.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
                         <img src="Assets/printer.png" alt="Printer">
@@ -130,8 +130,8 @@
                 <div class="slide">
                     <div class="slide-content">
                         <h3>CCTV Services</h3>
-                        <p>Professional CCTV installation and maintenance.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <p>We deliver comprehensive planning, professional installation, and reliable<br> maintenance of CCTV systems, strengthening site security, enhancing<br> monitoring capabilities, and providing greater operational control.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
                         <img src="Assets/cctv.png" alt="CCTV">
@@ -141,33 +141,33 @@
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Network / IP / PBX Services</h3>
-                        <p>Complete network infrastructure and IP telephony.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <p>We specialize in the design, installation, and configuration of secure network and <br> IP-PBX systems to support reliable connectivity, efficient communication, <br>1and scalable solutions that empower business growth.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="Assets/network.png" alt="Network">
+                        <img src="Assets/it.png" alt="Network">
                     </div>
                 </div>
 
                 <div class="slide">
                     <div class="slide-content">
                         <h3>IT Consultancy</h3>
-                        <p>Expert IT consulting services.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <p>We provide strategic IT consultancy that minimizes downtime, strengthens security,<br>and supports scalable growth.Our clear, actionable solutions simplify complex technology,<br> helping decision-makers move forward with confidence. Even a short consultation<br> can reveal hidden gaps, risks, and opportunities.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="Assets/consultancy.png" alt="Consultancy">
+                        <img src="Assets/guy-laptop.png" alt="Consultancy">
                     </div>
                 </div>
 
                 <div class="slide">
                     <div class="slide-content">
                         <h3>Web Base / Server Deployment</h3>
-                        <p>Professional server deployment and support.</p>
-                        <a href="#" class="learn-more-link">Learn More →</a>
+                        <p>We handle the creation, deployment, and configuration of web-based and server systems,<br> ensuring reliable business applications, efficient data management,<br> and system stability aligned with operational needs.</p>
+                        <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                     </div>
                     <div class="slide-image">
-                        <img src="Assets/server.png" alt="Server">
+                        <img src="Assets/network.png" alt="Server">
                     </div>
                 </div>
                     
@@ -260,40 +260,74 @@
             });
         }
 
-        // Slider arrows
-        function scrollSlider(direction) {
-            const slider = document.getElementById('slider');
-            const slide = slider.querySelector('.slide');
-            const slideWidth = slide.clientWidth;
+        // 2. Services Slider & Navigation Sync Logic
+    const serviceLinks = document.querySelectorAll('.services-nav a');
+    const sliderWrapper = document.getElementById('slider');
+    let currentIndex = 0;
 
-            slider.scrollBy({
-                left: direction * slideWidth,
-                behavior: 'smooth'
-            });
+    function updateSlider(index) {
+        currentIndex = index;
+        const slide = sliderWrapper.querySelector('.slide');
+        const slideWidth = slide.clientWidth;
+
+        // Move the slider
+        sliderWrapper.scrollTo({
+            left: currentIndex * slideWidth,
+            behavior: 'smooth'
+        });
+
+        // Update the Nav Bar Highlight
+        serviceLinks.forEach(link => link.classList.remove('active'));
+        serviceLinks[currentIndex].classList.add('active');
+    }
+
+    // Arrow Button Function (Fixed)
+    function scrollSlider(direction) {
+        let newIndex = currentIndex + direction;
+
+        // Loop logic: if at end, go to start; if at start, go to end
+        if (newIndex >= serviceLinks.length) {
+            newIndex = 0;
+        } else if (newIndex < 0) {
+            newIndex = serviceLinks.length - 1;
         }
 
-        // Services nav → slider
-        const serviceLinks = document.querySelectorAll('.services-nav a');
-        const sliderWrapper = document.getElementById('slider');
+        updateSlider(newIndex);
+    }
 
-        serviceLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-
-                serviceLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-
-                const index = Number(link.dataset.index);
-                const slide = sliderWrapper.querySelector('.slide');
-                const slideWidth = slide.clientWidth;
-
-                sliderWrapper.scrollTo({
-                    left: index * slideWidth,
-                    behavior: 'smooth'
-                });
-            });
+    // Nav Link Click Events (When you click the text)
+    serviceLinks.forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateSlider(index);
         });
-    </script>
+    });
+
+    // Optional: Keep slider in sync if window is resized
+    window.addEventListener('resize', () => updateSlider(currentIndex));
+    // ADD THIS NEW "WATCHER" CODE:
+sliderWrapper.addEventListener('scroll', () => {
+    // 1. Get the width of one slide
+    const slideWidth = sliderWrapper.offsetWidth;
+    
+    // 2. Calculate which slide is currently visible (0, 1, 2, etc.)
+    const currentScroll = sliderWrapper.scrollLeft;
+    const newIndex = Math.round(currentScroll / slideWidth);
+
+    // 3. Update the global 'currentIndex' so arrows keep working correctly
+    currentIndex = newIndex;
+
+    // 4. Update the Blue Active Line
+    serviceLinks.forEach((link, index) => {
+        if (index === newIndex) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</script>
+
 
 </body>
 
