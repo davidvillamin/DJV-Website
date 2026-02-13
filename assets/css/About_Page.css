@@ -161,7 +161,7 @@ body {
 /* HERO SECTION */
 
 .hero {
-    min-height: calc(100svh - 64px);
+    /*min-height: calc(100svh - 64px);*/
     display: flex;
     align-items: center;
     justify-content: center;

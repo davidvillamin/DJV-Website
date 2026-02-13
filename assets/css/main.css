@@ -25,6 +25,509 @@ body {
 }
 
 
+/* ================= MESSAGE PAGE ================= */
+
+.message-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 40px 20px;
+}
+
+.message-content {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.message-content h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.message-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.messaging-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.message-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.messenger {
+    background: #0084FF;
+}
+
+.messenger:hover {
+    background: #0073E6;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1EBE57;
+}
+
+.viber {
+    background: #7B519C;
+}
+
+.viber:hover {
+    background: #6A4685;
+}
+
+.option-circle {
+    font-size: 20px;
+}
+
+
+/* ================= CALL PAGE ================= */
+
+.call-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 40px 20px;
+}
+
+.call-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.phone-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.phone-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.phone-icon svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.phone-card h2 {
+    color: #0d6efd;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.phone-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-row a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.phone-row a:hover {
+    color: #0d6efd;
+}
+
+.fax-row {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.fax-label {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .message-content {
+        padding: 25px;
+    }
+    .message-content h1 {
+        font-size: 20px;
+    }
+    .message-option {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+    .phone-card {
+        padding: 25px;
+    }
+    .phone-card h2 {
+        font-size: 18px;
+    }
+    .phone-row a {
+        font-size: 14px;
+    }
+}
+
+
+/* ================= TECH SUPPORT MODAL ================= */
+
+.tech-support-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-support-modal-overlay.active {
+    display: flex;
+}
+
+.tech-support-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 60px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-support-modal h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    color: #000;
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.support-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #FAFAFA;
+}
+
+.support-option:hover {
+    border-color: #0d6efd;
+    background: #F0F8FF;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+.option-icon {
+    color: #0d6efd;
+    margin-bottom: 12px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.support-option h3 {
+    margin: 0;
+    color: #0d6efd;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .tech-support-modal {
+        padding: 25px;
+        width: 95%;
+    }
+    .tech-support-modal h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .support-options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .support-option {
+        padding: 20px;
+    }
+}
+
+
+/* ================= MODAL SECONDARY STYLES ================= */
+
+.modal-back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.modal-back-btn:hover {
+    color: #000;
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+
+/* Messaging Options */
+
+.messaging-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-option-btn {
+    display: flex;
+    align-items: center;
+    /* Vertically centers icon and text */
+    justify-content: center;
+    /* Horizontally centers the group */
+    flex-direction: row;
+    /* FIX: Changed from column to row */
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.message-option-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+    /* Makes the icon slightly larger */
+}
+
+.message-option-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.messenger {
+    background: #0084FF;
+}
+
+.messenger:hover {
+    background: #0073E6;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1EBE57;
+}
+
+.viber {
+    background: #7B519C;
+}
+
+.viber:hover {
+    background: #6A4685;
+}
+
+
+/* Phone Numbers Modal */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.phone-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.phone-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: #0d6efd;
+}
+
+.fax-group {
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.fax-label {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* Email Options */
+
+.email-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.email-option-btn {
+    display: block;
+    padding: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.email-option-btn:hover {
+    border-color: #0d6efd;
+    background: #F0F8FF;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+    transform: translateY(-2px);
+}
+
+.email-option-btn strong {
+    color: #0d6efd;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email-option-btn span {
+    color: #666;
+    font-size: 13px;
+}
+
+
 /* NAVBAR */
 
 .navbar {
@@ -440,6 +943,9 @@ body {
 .hero-content h2,
 .hero-content p {
     transform: translateX(25px);
+    margin-right: 30px;
+    margin-bottom: 50px;
+    align-items: center;
 }
 
 
