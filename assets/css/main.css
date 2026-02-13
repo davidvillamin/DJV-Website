@@ -4,7 +4,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+
 
 }
 
@@ -16,12 +17,15 @@ html {
 }
 
 body {
-    font-family: Radio Canada Big;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Radio Canada Big', sans-serif;
     margin: 0;
-    background: linear-gradient(180deg, rgba(0, 73, 127, 1) 18%, rgba(21, 108, 174, 1) 50%, rgba(89, 163, 218, 1) 70%, #FFFFFF 88%);
-
+    /* This creates the deep blue to white fade seen in your image */
+    background: linear-gradient(180deg, 
+                #00497F 0%, 
+                #156CAE 30%, 
+                #59A3DA 60%, 
+                #FFFFFF 85%);
+    background-attachment: scroll;
 }
 
 
@@ -685,10 +689,16 @@ body {
 
 /* Landing Page Hero Section */
 .Landing-Hero {
-    background: linear-gradient(180deg, rgba(0, 73, 127, 1) 18%, rgba(21, 108, 174, 1) 50%, rgba(89, 163, 218, 1) 70%, #FFFFFF 88%);
-    max-width: 600px;
-    padding: 0 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Removed the local gradient here so it uses the body's background */
+    background: transparent; 
     scroll-snap-align: start;
+
 }
 /* Landing Page */
 .Landing-welcome-text>h1 {
@@ -763,22 +773,18 @@ body {
     color: #0F5D99;
     border: 2px solid transparent;
 }
-
-/*Service Page*/
-
-
-/* SERVICE HERO SECTION */
-.Landing-services {
+/* Landing Page Carousel Services */
+.Landing-services-Hero {
     color: white;
-    max-width: 600px;
-    padding: 0 20px;
+    height: 100vh;
+    scroll-snap-align: center;
 }
-.Landing-service>h3 {
+.Landing-services-Hero>h3 {
     color: #003D81;
     font-size: 50px;
     font-weight: 300;
     text-align: center;
-    font: radio big canada;
+    font: 'radio big canada';
 }
 
 .Landing-service {
@@ -797,6 +803,207 @@ body {
     width: 100%;
     padding: 10px 100px;
 }
+
+.Landing-services-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    border: none;
+}
+.Landing-services-nav ul li {
+    flex: 1;
+    /* Ensures each section takes up equal width */
+    text-align: center;
+}
+
+.Landing-services-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #b0b0b0;
+    /* Light gray for inactive text */
+    padding-top: 15px;
+    /* Gap between line and text */
+    display: block;
+    /* Makes the link/border fill the flex area */
+    transition: all 0.3s ease;
+    border-top: 4px solid #f0f0f0;
+    /* Light gray base line for all */
+}
+.Landing-services-nav a.active {
+    color: #004a99;
+    /* Bold dark blue text */
+    font-weight: 700;
+    border-top: 4px solid #85c1e9;
+}
+
+.Landing-services-nav a:hover {
+    color: #004a99;
+}
+
+/* Landing Page Image Slider*/
+.Landing-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.Landing-slider-wrapper {
+    display: flex;
+    overflow-x: auto;
+    /* Allows scrolling */
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* Hides scrollbar for IE/Edge */
+    scrollbar-width: none;
+    /* Hides scrollbar for Firefox */
+}
+.slider-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Ensure each slide takes up the full width of the wrapper */
+
+.Landing-slide {
+    min-width: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.Landing-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    scroll-snap-align: center;
+    padding: 20px;
+}
+
+.Landing-slide-content {
+    flex: 1;
+}
+
+.Landing-slide-content h3 {
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 40px;
+    text-align: left;
+    color: black;
+    margin-bottom: 20%;
+    margin-left: 10%;
+}
+
+.Landing-slide-content p {
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: #333;
+    position: relative;
+    bottom: 180px;
+    left: 10%;
+}
+
+.Landing-slide-image img {
+    width: 450px;
+    /* Matches your layout image */
+    height: auto;
+    border-radius: 4px;
+    position: relative;
+    right: 20%;
+    bottom: 40px;
+}
+/* Arrow Buttons  */
+
+.arrow {
+    background: white;
+    border: 1px solid #ddd;
+    color: #2683EB;
+    /* 1. RESIZE: Smaller font and less padding makes the button smaller */
+    font-size: 18px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+    transition: 0.3s;
+    /* 2. POSITIONING: Absolute allows them to sit 'on top' of the content */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Centers them vertically */
+}
+
+
+/* 3. MOVE CLOSER: Adjust these 'px' values to move them inward */
+
+.left-arrow {
+    left: 40px;
+    /* Increase this number to move it closer to the text */
+}
+
+.right-arrow {
+    right: 40px;
+    /* Increase this number to move it closer to the image */
+}
+
+.arrow:hover {
+    background-color: #f0f7ff;
+    border-color: #2683EB;
+}
+
+.learn-more-link {
+    position: relative;
+    bottom: 150px;
+    left: 10%;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-family: "Radio Canada Big", sans-serif;
+}
+ /* Landng Map Container */
+ .Landing-map-section {
+    min-height: 100vh;
+    /* Changed from height to min-height for safety */
+    width: 100%;
+    scroll-snap-align: start;
+    background-color: #f9f9f9;
+    position: relative;
+    /* Ensure it stays in the document flow */
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: end;
+ }
+
+ .Landing-map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    padding: 40px 0;
+ }
+
+ .Landing-map-section iframe {
+    width: 300%;
+    height: 500px;
+    /* Essential: iframes need a height to be visible */
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+ }
+ .Landing-map-container h2 {
+    font-family: "Radio Canada Big", sans-serif;
+    color: #003D81;
+    font-size: 40px;
+    margin: 0;
+    order: -1;
+ }
+/*Service Page*/
+
+
+/* SERVICE HERO SECTION */
+
 /*SERVICE CARDS*/
 
 .services-cards {
@@ -956,7 +1163,7 @@ body {
     color: white;
     padding: 10px 0px 20px;
     font-family: 'Radio Canada Big', sans-serif;
-    /*scroll-snap-align: end;*/
+    
 
 }
 
