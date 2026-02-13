@@ -1,14 +1,14 @@
 <!--NAVIGATOR FIXED-->
 <nav class="navbar bg-black" data-bs-theme="dark">
     <div class="container-fluid d-flex align-items-center ">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="/assets/img/ICON_FINAL.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> DJV IT Solutions
         </a>
-        <div class="d-flex align-items-center link-light">
-            <a href="/" class="ms-5 text-reset text-decoration-none">Home</a>
-            <a href="/services" class="mx-5 text-reset text-decoration-none">Services</a>
-            <a href="/about" class="me-5 text-reset text-decoration-none">About</a>
-            <button id="nav-tech-support" type="button" class="btn btn-primary ">Get Tech Support</button>
+        <div class="d-flex align-items-center link-light nav">
+            <a href="/" class="nav-link ms-5 text-reset">Home</a>
+            <a href="/services" class="nav-link mx-5 text-reset">Services</a>
+            <a href="/about" class="nav-link me-5 text-reset">About</a>
+            <button id="nav-tech-support" type="button" class="btn btn-primary">Get Tech Support</button>
 
         </div>
     </div>
@@ -18,14 +18,18 @@
 
 <div id="techSupportModal" class="tech-support-modal-overlay">
     <div class="tech-support-modal">
+        <button class="modal-close-btn" id="techSupportModalCloseBtn">&times;</button>
         <div class="support-options">
-            <div class="support-option" id="messageOption">
+            <div class="support-option message-option" id="messageOption">
+                <i class="bi bi-chat-dots"></i>
                 <h3>MESSAGE</h3>
             </div>
-            <div class="support-option" id="callOption">
+            <div class="support-option call-option" id="callOption">
+                <i class="bi bi-telephone"></i>
                 <h3>CALL</h3>
             </div>
-            <div class="support-option" id="emailOption">
+            <div class="support-option email-option" id="emailOption">
+                <i class="bi bi-envelope-fill"></i>
                 <h3>EMAIL</h3>
             </div>
         </div>
@@ -35,6 +39,7 @@
 <!-- Second Modal: Message Options -->
 <div id="messageModal" class="tech-support-modal-overlay">
     <div class="tech-support-modal">
+        <button class="modal-close-btn" id="messageModalCloseBtn">&times;</button>
         <div class="messaging-options">
             <a href="https://www.facebook.com/djvitsolution" target="_blank" class="message-option-btn messenger">
                 <i class="bi bi-messenger"></i> Message via Messenger
@@ -52,29 +57,30 @@
 <!-- Third Modal: Call Options -->
 <div id="callModal" class="tech-support-modal-overlay">
     <div class="tech-support-modal">
+        <button class="modal-close-btn" id="callModalCloseBtn">&times;</button>
         <div class="phone-numbers-modal">
-            <div class="phone-group">
-                <span class="fax-label">PHONE</span>
-
-                <a href="tel:09629461425" class="phone-link">
-                    <i class="bi bi-telephone"></i> 09629461425
-                </a>
-                <a href="tel:09220427113" class="phone-link">
-                    <i class="bi bi-telephone"></i> 09220427113
-                </a>
+            <div class="phone-section">
+                <div class="phone-grid">
+                    <a href="tel:09629461425" class="phone-link-btn p-0">
+                        <i class="bi bi-phone"></i> (0962) 9461 425
+                    </a>
+                    <a href="tel:09220427113" class="phone-link-btn">
+                        <i class="bi bi-phone"></i> (0922) 0427 113
+                    </a>
+                    <a href="tel:09215508103" class="phone-link-btn">
+                        <i class="bi bi-phone"></i>(0921) 5508 103
+                    </a>
+                    <a href="tel:09155443789" class="phone-link-btn ">
+                        <i class="bi bi-phone"></i> (0915) 5443 789
+                    </a>
+                </div>
             </div>
-            <div class="phone-group">
-                <a href="tel:09215508103" class="phone-link">
-                    <i class="bi bi-telephone"></i> 09215508103
-                </a>
-                <a href="tel:09155443789" class="phone-link">
-                    <i class="bi bi-telephone"></i> 09155443789
-                </a>
-            </div>
-            <div class="phone-group fax-group">
-                <span class="fax-label">FAX</span>
-                <a href="tel:046-5141914" class="phone-link">
-                    <i class="bi bi-telephone"></i>(046) 514 1914</a>
+            <div class="phone-section">
+                <div class="d-flex">
+                    <a href="tel:046-5141914" class="phone-link-btn flex-fill">
+                        <i class="bi bi-telephone"></i> (046) 514 1914
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -83,6 +89,7 @@
 <!-- Fourth Modal: Email Options -->
 <div id="emailModal" class="tech-support-modal-overlay">
     <div class="tech-support-modal">
+        <button class="modal-close-btn" id="emailModalCloseBtn">&times;</button>
         <div class="email-options">
             <a href="mailto:office.djvitsolutions@gmail.com" class="email-option-btn">
                 <strong>

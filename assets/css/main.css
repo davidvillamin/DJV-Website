@@ -4,27 +4,19 @@
 
 html {
     scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-
-
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
     font-family: 'Radio Canada Big', sans-serif;
     margin: 0;
     /* This creates the deep blue to white fade seen in your image */
-    background: linear-gradient(180deg, 
-                #00497F 0%, 
-                #156CAE 30%, 
-                #59A3DA 60%, 
-                #FFFFFF 85%);
+    background: linear-gradient(180deg, #00497F 0%, #156CAE 30%, #59A3DA 60%, #FFFFFF 85%);
     background-attachment: scroll;
 }
 
@@ -316,10 +308,74 @@ body {
 }
 
 .support-option:hover {
-    border-color: #0d6efd;
-    background: #F0F8FF;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+
+/* MESSAGE OPTION - BLUE */
+
+.support-option.message-option h3 {
+    color: #0d6efd;
+}
+
+.support-option.message-option {
+    border-color: #0d6efd;
+}
+
+.support-option.message-option i {
+    color: #0d6efd;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.message-option:hover {
+    background: #E7F1FF;
+    border-color: #0d6efd;
+}
+
+
+/* CALL OPTION - GREEN */
+
+.support-option.call-option h3 {
+    color: #28a745;
+}
+
+.support-option.call-option {
+    border-color: #28a745;
+}
+
+.support-option.call-option i {
+    color: #28a745;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.call-option:hover {
+    background: #E8F5E9;
+    border-color: #28a745;
+}
+
+
+/* EMAIL OPTION - ORANGE */
+
+.support-option.email-option h3 {
+    color: #ff9800;
+}
+
+.support-option.email-option {
+    border-color: #ff9800;
+}
+
+.support-option.email-option i {
+    color: #ff9800;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.email-option:hover {
+    background: #FFF3E0;
+    border-color: #ff9800;
 }
 
 .option-icon {
@@ -478,11 +534,130 @@ body {
     color: #0d6efd;
 }
 
+
+/* Phone Link Button Style */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.phone-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.phone-section-label {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.phone-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: #28a745;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.phone-link-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.phone-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Phone Link Button Style */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.phone-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.phone-section-label {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.phone-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: #28a745;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.phone-link-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.phone-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+}
 .fax-group {
     padding-top: 15px;
     border-top: 1px solid #E0E0E0;
 }
-
 .fax-label {
     color: #999;
     font-size: 12px;
@@ -493,15 +668,12 @@ body {
     margin-bottom: 8px;
 }
 
-
 /* Email Options */
-
 .email-options {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
 .email-option-btn {
     display: block;
     padding: 20px;
@@ -511,29 +683,24 @@ body {
     color: #000;
     transition: all 0.3s ease;
 }
-
 .email-option-btn:hover {
-    border-color: #0d6efd;
-    background: #F0F8FF;
-    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+    border-color: #ff9800;
+    background: #FFF3E0;
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.2);
     transform: translateY(-2px);
 }
-
 .email-option-btn strong {
-    color: #0d6efd;
+    color: #ff9800;
     font-size: 15px;
     display: block;
     margin-bottom: 5px;
 }
-
 .email-option-btn span {
     color: #666;
     font-size: 13px;
 }
 
-
 /* NAVBAR */
-
 .navbar {
     display: flex;
     align-items: center;
@@ -543,6 +710,7 @@ body {
     height: auto;
     padding: 20px 20px;
     /* adjust the black background */
+    
     overflow: hidden;
     position: sticky;
     top: 0;
@@ -550,7 +718,6 @@ body {
 }
 
 /* Map*/
-
 .map-container {
     width: 100%;
     max-width: 1200px;
@@ -559,66 +726,48 @@ body {
     box-sizing: border-box;
 }
 
-
 /* BRAND GROUP */
-
 .brand {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-
 /* LOGO */
-
 .logo {
     height: 42px;
     width: auto;
     display: block;
 }
 
-
 /* BRAND TEXT */
-
 .brand-text {
     height: 26px;
     width: auto;
     /* tweak until it looks right */
+    
     display: block;
 }
 
-
 /* NAV LINKS */
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 18px;
-    align-items: center;
+.nav-link {
+    color: inherit;
+    /* keeps your original color */
+    
+    border-bottom: 2px solid transparent;
 }
-
-.nav-links a:hover {
-    color: #2683EB;
+.nav-link:hover {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
 }
-
-.nav-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    gap: 18px;
-    padding: 6px 6px;
-    transition: 0.3s;
+.nav-link.active {
+    color: #0d6efd !important;
+    /* force Bootstrap override */
+    
+    border-bottom: 2px solid #0d6efd;
 }
-
-.nav-links.active {
-    display: flex;
-}
-
 
 /* Social Media Links */
-
 .social-fb,
 .social-ig,
 .social-tiktok {
@@ -631,16 +780,13 @@ body {
     width: 24px;
     transition: color 0.3s ease;
 }
-
 .social-fb:hover,
 .social-ig:hover,
 .social-tiktok:hover {
     filter: invert(36%) sepia(99%) saturate(1476%) hue-rotate(186deg) brightness(91%) contrast(101%);
 }
 
-
 /* Button */
-
 .inquire-button {
     cursor: pointer;
     text-align: center;
@@ -655,18 +801,15 @@ body {
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .inquire-button:hover {
     background: linear-gradient(to bottom, #6dd5ed, #2683EB);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-1px);
 }
-
 .nav-links a.active {
     color: #2683EB;
     position: relative;
 }
-
 .nav-links a.active::after {
     content: "";
     position: absolute;
@@ -676,34 +819,12 @@ body {
     height: 2px;
     background-color: #2683EB;
 }
-
 .menu-toggle {
     display: none;
 }
 
-.hero-content h2,
-.hero-content p {
-    transform: translateX(25px);
-}
-
-
-/* Landing Page Hero Section */
-.Landing-Hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* Removed the local gradient here so it uses the body's background */
-    background: transparent; 
-    scroll-snap-align: start;
-
-}
-/* Landing Page */
-.Landing-welcome-text>h1 {
-    font-size: 80px;
-    font-weight: 200;
+/* HERO SECTION */
+.LandingP-Hero {
     color: white;
     font-family: "Source Serif Pro";
     position: absolute;
@@ -713,10 +834,7 @@ body {
     text-align: center;
     width: 100%;
 }
-
-.Landing-welcome-subtext>h2 {
-    text-align: center;
-    color: white;
+.LandingP-Hero h2 {
     font-weight: 100;
     font-size: 80px;
     font-family: "Radio Canada Big", sans-serif;
@@ -724,71 +842,39 @@ body {
     left: 30%;
     top: 310px;
 }
+.LandingP-Hero p {
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.hero-content h2,
+.hero-content p {
+    transform: translateX(25px);
+}
 
-.Landing-Hero>h4 {
-    color: white;
-    font-size: 21.5px;
-    font-weight: 300;
+/* Landing Page */
+
+/*Service Page*/
+
+/* SERVICE HERO SECTION */
+.service-hero h2 {
+    font-weight: 100;
+    font-size: 80px;
     text-align: center;
-    font: radio big canada;
-    position: absolute;
-    bottom: 450px;
-}
-/* Landing Page Buttons */
-.Landing-GS-btn {
-    text-decoration: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #2683EB;
-    color: white;
-    border: none;
-    position: absolute;
-    top: 495px;
-    left: 42%;
-    /* Animation */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.Landing-GS-btn:hover {
-    background-color: #0F5D99;
-}
- 
-.Landing-TB-btn {
-    text-decoration: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: transparent;
     color: white;
     position: absolute;
     top: 495px;
     left: 50%;
     /* Animation */
-    transition: all 0.3s ease; 
+    
+    transition: all 0.3s ease;
 }
-
 .Landing-GS-btn:hover {
     background-color: white;
     color: #0F5D99;
     border: 2px solid transparent;
 }
-/* Landing Page Carousel Services */
-.Landing-services-Hero {
-    color: white;
-    height: 100vh;
-    scroll-snap-align: center;
-}
-.Landing-services-Hero>h3 {
-    color: #003D81;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    font: 'radio big canada';
-}
-
-.Landing-service {
+.service-hero p {
     font-weight: 100;
     font-size: 20px;
     text-align: center;
@@ -799,218 +885,13 @@ body {
     bottom: 50%;
     top: 60%;
 }
-/* Landing Page Carousel Services Nav */
-.Landing-services-nav {
-    width: 100%;
-    padding: 10px 100px;
-}
-
-.Landing-services-nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    border: none;
-}
-.Landing-services-nav ul li {
-    flex: 1;
-    /* Ensures each section takes up equal width */
-    text-align: center;
-}
-
-.Landing-services-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #b0b0b0;
-    /* Light gray for inactive text */
-    padding-top: 15px;
-    /* Gap between line and text */
-    display: block;
-    /* Makes the link/border fill the flex area */
-    transition: all 0.3s ease;
-    border-top: 4px solid #f0f0f0;
-    /* Light gray base line for all */
-}
-.Landing-services-nav a.active {
-    color: #004a99;
-    /* Bold dark blue text */
-    font-weight: 700;
-    border-top: 4px solid #85c1e9;
-}
-
-.Landing-services-nav a:hover {
-    color: #004a99;
-}
-
-/* Landing Page Image Slider*/
-.Landing-slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.Landing-slider-wrapper {
-    display: flex;
-    overflow-x: auto;
-    /* Allows scrolling */
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    /* Hides scrollbar for IE/Edge */
-    scrollbar-width: none;
-    /* Hides scrollbar for Firefox */
-}
-.slider-wrapper::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Ensure each slide takes up the full width of the wrapper */
-
-.Landing-slide {
-    min-width: 100%;
-    display: flex;
-    flex-shrink: 0;
-}
-
-.Landing-slide {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    scroll-snap-align: center;
-    padding: 20px;
-}
-
-.Landing-slide-content {
-    flex: 1;
-}
-
-.Landing-slide-content h3 {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: 40px;
-    text-align: left;
-    color: black;
-    margin-bottom: 20%;
-    margin-left: 10%;
-}
-
-.Landing-slide-content p {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: 20px;
-    text-align: left;
-    color: #333;
-    position: relative;
-    bottom: 180px;
-    left: 10%;
-}
-
-.Landing-slide-image img {
-    width: 450px;
-    /* Matches your layout image */
-    height: auto;
-    border-radius: 4px;
-    position: relative;
-    right: 20%;
-    bottom: 40px;
-}
-/* Arrow Buttons  */
-
-.arrow {
-    background: white;
-    border: 1px solid #ddd;
-    color: #2683EB;
-    /* 1. RESIZE: Smaller font and less padding makes the button smaller */
-    font-size: 18px;
-    padding: 6px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 10;
-    transition: 0.3s;
-    /* 2. POSITIONING: Absolute allows them to sit 'on top' of the content */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    /* Centers them vertically */
-}
-
-
-/* 3. MOVE CLOSER: Adjust these 'px' values to move them inward */
-
-.left-arrow {
-    left: 40px;
-    /* Increase this number to move it closer to the text */
-}
-
-.right-arrow {
-    right: 40px;
-    /* Increase this number to move it closer to the image */
-}
-
-.arrow:hover {
-    background-color: #f0f7ff;
-    border-color: #2683EB;
-}
-
-.learn-more-link {
-    position: relative;
-    bottom: 150px;
-    left: 10%;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-family: "Radio Canada Big", sans-serif;
-}
- /* Landng Map Container */
- .Landing-map-section {
-    min-height: 100vh;
-    /* Changed from height to min-height for safety */
-    width: 100%;
-    scroll-snap-align: start;
-    background-color: #f9f9f9;
-    position: relative;
-    /* Ensure it stays in the document flow */
-    /* Layout */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-type: end;
- }
-
- .Landing-map-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    max-width: 800px;
-    padding: 40px 0;
- }
-
- .Landing-map-section iframe {
-    width: 300%;
-    height: 500px;
-    /* Essential: iframes need a height to be visible */
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
- }
- .Landing-map-container h2 {
-    font-family: "Radio Canada Big", sans-serif;
-    color: #003D81;
-    font-size: 40px;
-    margin: 0;
-    order: -1;
- }
-/*Service Page*/
-
-
-/* SERVICE HERO SECTION */
 
 /*SERVICE CARDS*/
-
 .services-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 cards per row */
+    
     gap: 40px;
     width: 90%;
     margin: 500px auto 0;
@@ -1018,9 +899,7 @@ body {
     box-sizing: border-box;
 }
 
-
 /*SERVICE CARD STYLE*/
-
 .service-card {
     width: 100%;
     height: 500px;
@@ -1032,23 +911,18 @@ body {
     flex-direction: column;
 }
 
-
 /*SERVICE CARD IMAGE*/
-
 .card-image {
     position: relative;
     height: 230px;
 }
-
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
 /*SERVICE OVERLAY TEXT*/
-
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -1058,25 +932,21 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-
 .card-overlay h3 {
     margin: 0 0 10px;
     font-family: 'Radio Canada Big';
     font-size: 20px;
     font-weight: 700;
 }
-
 .card-overlay p {
     font-size: 14px;
     font-family: 'Source Serif Pro';
     color: black;
     margin-bottom: 20px;
 }
-
 .card-overlay a {
     margin-top: auto;
 }
-
 .btn {
     padding: 14px 16px;
     background: #0d6efd;
@@ -1086,20 +956,16 @@ body {
     text-align: center;
 }
 
-
 /*CARD LIST*/
-
 .cardlist {
     padding: 20px;
     list-style: none;
 }
-
 .cardlist li {
     padding-left: 18px;
     margin-bottom: 8px;
     position: relative;
 }
-
 .cardlist li::before {
     content: "▪";
     position: absolute;
@@ -1107,9 +973,7 @@ body {
     color: #0d6efd;
 }
 
-
 /* ================= ABOUT SECTION ================= */
-
 #body-about {
     font-family: Radio Canada Big;
     background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
@@ -1119,9 +983,7 @@ body {
     margin: 0;
 }
 
-
 /* HERO SECTION */
-
 .hero {
     min-height: calc(100svh - 64px);
     display: flex;
@@ -1129,25 +991,21 @@ body {
     justify-content: center;
     text-align: center;
 }
-
 .hero-content {
     color: white;
     max-width: 600px;
     padding: 20px;
 }
-
 .hero-content h2 {
     font-weight: 100;
     font-size: 80px;
     margin-bottom: 20px;
 }
-
 .hero-content p {
     font-weight: 100;
     font-size: 20px;
     line-height: 1.6;
 }
-
 .hero-content h2,
 .hero-content p {
     transform: translateX(25px);
@@ -1156,21 +1014,16 @@ body {
     align-items: center;
 }
 
-
 /* ================= FOOTER ================= */
-
 .footer {
     background-color: #6C6C6C;
     color: white;
     padding: 10px 0px 20px;
     font-family: 'Radio Canada Big', sans-serif;
-    
-
+    scroll-snap-align: end;
 }
 
-
 /* GRID LAYOUT */
-
 .footer-content {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr 1.5fr;
@@ -1179,19 +1032,14 @@ body {
     margin: 0 auto;
     align-items: start;
     margin-top: 100px;
-
 }
 
-
 /* COLUMN */
-
 .footer-col {
     min-width: 100;
 }
 
-
 /* Logo column */
-
 .footer-col:first-child {
     display: flex;
     flex-direction: column;
@@ -1200,16 +1048,13 @@ body {
     margin-bottom: 100px;
 }
 
-
 /* Social icons */
-
 .footer .social-icons {
     display: flex;
     gap: 18px;
     margin-left: 0;
     margin-top: 20px;
 }
-
 .footer .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -1222,14 +1067,11 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .footer .social-icons a:hover {
     transform: translateY(-3px);
 }
 
-
 /* Adjust Margin of social med icons*/
-
 .footer .social-icons {
     display: flex;
     gap: 15px;
@@ -1238,75 +1080,61 @@ body {
     margin-top: -20px;
     margin-left: 25px;
 }
-
 .footer .social-icons a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 35px;
     /* Increased slightly for better fit */
+    
     height: 35px;
     border-radius: 50%;
     color: white;
     text-decoration: none;
     transition: background 0.3s ease;
 }
-
 .footer .social-icons i {
     font-size: 22px;
 }
-
 .social-fb,
 .social-ig,
 .social-tiktok {
     font-size: 24px;
 }
-
 .footer .social-icons a:hover {
     transform: translateY(-3px);
 }
 
-
 /* Facebook */
-
 .footer .social-icons a:hover .social-fb {
     color: #1877F2;
 }
 
-
 /* Instagram */
-
 .footer .social-icons a:hover .social-ig {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285ae1 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-
 /* TikTok */
-
 .footer .social-icons a:hover .social-tiktok {
     color: #000;
 }
 
-
 /* Headings */
-
 .footer-col h4 {
     font-size: 18px;
     margin-bottom: 18px;
     font-weight: 500;
 }
 
-
 /* Lists */
-
 .footer-col ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .footer-col ul li {
     display: flex;
     align-items: flex-start;
@@ -1314,34 +1142,27 @@ body {
     margin-bottom: 12px;
 }
 
-
 /* Links */
-
 .footer-col a {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     transition: 0.3s ease;
 }
-
 .footer-col ul li a:hover {
     color: rgb(0, 128, 247);
     padding-left: 4px;
     text-decoration: underline;
 }
 
-
 /* Contact text */
-
 .footer-col ul li span {
     font-size: 15px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
 
-
 /* Bottom copyright */
-
 .footer-bottom {
     grid-column: 1 / -1;
     text-align: center;
@@ -1352,18 +1173,14 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
 /* Contact text */
-
 .footer-col ul li span {
     font-size: 15px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
 
-
 /* Bottom copyright */
-
 .footer-bottom {
     grid-column: 1 / -1;
     text-align: center;
@@ -1374,13 +1191,12 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
 /* MOBILE */
-
 @media (max-width: 600px) {
     body {
         margin: 0;
     }
+    
     .navbar {
         flex-direction: row;
         padding: 12px 16px;
@@ -1388,13 +1204,16 @@ body {
         width: 100%;
         box-sizing: border-box;
     }
+    
     .brand {
         gap: 8px;
         max-width: 80%;
     }
+    
     .logo {
         height: 34px;
     }
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -1409,16 +1228,20 @@ body {
         padding-left: 20px;
         box-sizing: border-box;
     }
+    
     .nav-links.active {
         display: flex;
     }
+    
     .nav-links a {
         padding: 12px 0;
         font-size: 16px;
     }
+    
     .brand-text {
         height: 18px;
     }
+    
     .menu-toggle {
         display: block;
         font-size: 28px;
@@ -1427,72 +1250,89 @@ body {
         color: white;
         cursor: pointer;
     }
+    
     .social-fb,
     .social-ig,
     .social-tiktok {
         display: block;
     }
+    
     .inquire-button {
         display: none;
     }
+    
     .hero-content {
         text-align: center;
         padding: 0;
         color: white;
         max-width: 600px;
     }
+    
     .hero-content h2 {
         font-size: 40px;
         line-height: 1.2;
     }
+    
     .hero-content p {
         font-size: 16px;
         line-height: 1.5;
         margin-top: 12px;
     }
+    
     .hero-content h2 {
         transform: translateX(0px);
     }
+    
     .hero-content p {
         transform: translateX(0px);
     }
+    
     .footer {
         padding: 40px 20px 20px;
         text-align: center;
     }
+    
     .footer-content {
         flex-direction: column;
         align-items: center;
         gap: 35px;
     }
+    
     .footer-col {
         min-width: 100%;
     }
     /* Logo + social icons */
+    
     .footer-col:first-child {
         align-items: center;
     }
+    
     .footer .social-icons {
         margin-top: 15px;
         justify-content: center;
     }
     /* Section titles */
+    
     .footer-col h4 {
         font-size: 16px;
         margin-bottom: 12px;
     }
     /* Links list */
+    
     .footer-col ul li {
         margin-bottom: 10px;
     }
+    
     .footer-col ul li a {
         font-size: 14px;
     }
     /* Remove blue hover on mobile */
+    
     .footer-col ul li a:hover {
         color: #ffffff;
         opacity: 0.85;
     }
+    
     .footer-bottom {
         font-size: 12px;
         margin-top: 25px;
