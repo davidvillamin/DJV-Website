@@ -4,21 +4,24 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 body {
     font-family: Radio Canada Big;
-    background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
-    display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    background: linear-gradient(180deg, rgba(0, 73, 127, 1) 18%, rgba(21, 108, 174, 1) 50%, rgba(89, 163, 218, 1) 70%, #FFFFFF 88%);
+
 }
 
 
@@ -38,7 +41,6 @@ body {
     top: 0;
     z-index: 1000;
 }
-
 
 /* Map*/
 
@@ -172,54 +174,111 @@ body {
     display: none;
 }
 
-
-/* HERO SECTION */
-
-.LandingP-Hero {
-    color: white;
-    max-width: 600px;
-    padding: 0 20px;
-}
-
-.LandingP-Hero h2 {
-    font-weight: 100;
-    font-size: 80px;
-    margin-bottom: 20px;
-}
-
-.LandingP-Hero p {
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 1.6;
-}
-
 .hero-content h2,
 .hero-content p {
     transform: translateX(25px);
 }
 
 
+/* Landing Page Hero Section */
+.Landing-Hero {
+    background: linear-gradient(180deg, rgba(0, 73, 127, 1) 18%, rgba(21, 108, 174, 1) 50%, rgba(89, 163, 218, 1) 70%, #FFFFFF 88%);
+    max-width: 600px;
+    padding: 0 20px;
+    scroll-snap-align: start;
+}
 /* Landing Page */
+.Landing-welcome-text>h1 {
+    font-size: 80px;
+    font-weight: 200;
+    color: white;
+    font-family: "Source Serif Pro";
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
 
+.Landing-welcome-subtext>h2 {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 80px;
+    font-family: "Radio Canada Big", sans-serif;
+    position: absolute;
+    left: 380px;
+    top: 310px;
+}
+
+.Landing-Hero>h4 {
+    color: white;
+    font-size: 21.5px;
+    font-weight: 300;
+    text-align: center;
+    font: radio big canada;
+    margin-top: 300px;
+}
+/* Landing Page Buttons */
+.Landing-GS-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #2683EB;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 495px;
+    left: 600px;
+    /* Animation */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.Landing-GS-btn:hover {
+    background-color: #0F5D99;
+}
+ 
+.Landing-TB-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 495px;
+    left: 750px;
+    /* Animation */
+    transition: all 0.3s ease; 
+}
+
+.Landing-GS-btn:hover {
+    background-color: white;
+    color: #0F5D99;
+    border: 2px solid transparent;
+}
 
 /*Service Page*/
 
 
 /* SERVICE HERO SECTION */
-
-.service-hero h2 {
-    font-weight: 100;
-    font-size: 80px;
-    text-align: center;
+.Landing-services {
     color: white;
-    font-family: 'Radio Canada Big';
-    position: absolute;
-    left: 38%;
-    bottom: 60%;
-    top: 38%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.Landing-service>h3 {
+    color: #003D81;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    font: radio big canada;
 }
 
-.service-hero p {
+.Landing-service {
     font-weight: 100;
     font-size: 20px;
     text-align: center;
@@ -230,8 +289,11 @@ body {
     bottom: 50%;
     top: 60%;
 }
-
-
+/* Landing Page Carousel Services Nav */
+.Landing-services-nav {
+    width: 100%;
+    padding: 10px 100px;
+}
 /*SERVICE CARDS*/
 
 .services-cards {
@@ -388,7 +450,8 @@ body {
     color: white;
     padding: 10px 0px 20px;
     font-family: 'Radio Canada Big', sans-serif;
-    scroll-snap-align: end;
+    /*scroll-snap-align: end;*/
+
 }
 
 
@@ -402,6 +465,7 @@ body {
     margin: 0 auto;
     align-items: start;
     margin-top: 100px;
+
 }
 
 
