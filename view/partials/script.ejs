@@ -1,2 +1,32 @@
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!--Our Values - Our Mission - Our Vision Text Clickable-->
+<script>
+    function updateNav(position, element, section) {
+        // 1. Move the blue line
+        document.getElementById('nav-line').style.left = position;
+
+        // 2. Reset text colors
+        const links = document.querySelectorAll('#custom-nav .nav-link');
+        links.forEach(link => {
+            link.classList.remove('text-info', 'fw-bold');
+            link.classList.add('text-white-50');
+        });
+        element.classList.add('text-info', 'fw-bold');
+        element.classList.remove('text-white-50');
+
+        // 3. SHOW/HIDE ACRONYM Logic
+        const acronym = document.getElementById('acronym-container');
+        const other = document.getElementById('other-content');
+
+        if (section === 'values') {
+            acronym.style.display = 'block';
+            other.style.display = 'none';
+        } else {
+            acronym.style.display = 'none';
+            other.style.display = 'block';
+            document.getElementById('content-title').innerText = "Our " + section.charAt(0).toUpperCase() + section.slice(1);
+        }
+    }
+</script>

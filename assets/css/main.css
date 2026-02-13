@@ -1,4 +1,4 @@
-.navbar .bg-body-tertiary{
+.navbar .bg-body-tertiary {
     color: black;
 }
 
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Radio Canada Big';
+    font-family: Radio Canada Big;
     background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
     display: flex;
     flex-direction: column;
@@ -172,6 +172,7 @@ body {
     display: none;
 }
 
+
 /* HERO SECTION */
 
 .LandingP-Hero {
@@ -196,9 +197,14 @@ body {
 .hero-content p {
     transform: translateX(25px);
 }
-/* Landing Page */ 
+
+
+/* Landing Page */
+
 
 /*Service Page*/
+
+
 /* SERVICE HERO SECTION */
 
 .service-hero h2 {
@@ -220,10 +226,11 @@ body {
     color: white;
     font-family: 'Radio Canada Big';
     position: absolute;
-    left: 23%;
+    left: 26%;
     bottom: 50%;
     top: 60%;
 }
+
 
 /*SERVICE CARDS*/
 
@@ -237,7 +244,10 @@ body {
     padding: 0 20px 100px 20px;
     box-sizing: border-box;
 }
+
+
 /*SERVICE CARD STYLE*/
+
 .service-card {
     width: 100%;
     height: 500px;
@@ -248,7 +258,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
 /*SERVICE CARD IMAGE*/
+
 .card-image {
     position: relative;
     height: 230px;
@@ -259,7 +272,10 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+
 /*SERVICE OVERLAY TEXT*/
+
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -296,7 +312,10 @@ body {
     font-size: 14px;
     text-align: center;
 }
+
+
 /*CARD LIST*/
+
 .cardlist {
     padding: 20px;
     list-style: none;
@@ -314,6 +333,54 @@ body {
     left: 0;
     color: #0d6efd;
 }
+
+
+/* ================= ABOUT SECTION ================= */
+
+#body-about {
+    font-family: Radio Canada Big;
+    background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    min-height: calc(100svh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-weight: 100;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-content h2,
+.hero-content p {
+    transform: translateX(25px);
+}
+
+
 /* ================= FOOTER ================= */
 
 .footer {
