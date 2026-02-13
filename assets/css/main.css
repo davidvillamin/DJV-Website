@@ -721,7 +721,7 @@ body {
     font-size: 80px;
     font-family: "Radio Canada Big", sans-serif;
     position: absolute;
-    left: 380px;
+    left: 30%;
     top: 310px;
 }
 
@@ -731,10 +731,12 @@ body {
     font-weight: 300;
     text-align: center;
     font: radio big canada;
-    margin-top: 300px;
+    position: absolute;
+    bottom: 450px;
 }
 /* Landing Page Buttons */
 .Landing-GS-btn {
+    text-decoration: none;
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
@@ -744,7 +746,7 @@ body {
     border: none;
     position: absolute;
     top: 495px;
-    left: 600px;
+    left: 42%;
     /* Animation */
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -754,16 +756,15 @@ body {
 }
  
 .Landing-TB-btn {
+    text-decoration: none;
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px;
     background-color: transparent;
     color: white;
-    border: 2px solid white;
     position: absolute;
     top: 495px;
-    left: 750px;
+    left: 50%;
     /* Animation */
     transition: all 0.3s ease; 
 }
