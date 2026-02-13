@@ -2,151 +2,123 @@
 <%- include("partials/nav") %>
 
 <body>
-    <header>
-        <nav class="navbar">
-
-            <div class="brand">
-                <img src="Assets/ICON_FINAL.png" class="logo">
-                <img src="Assets/Dark-Text-Logo.png" class="brand-text">
+    <!-- HERO SECTION -->
+    <div class="service-hero">
+        <div class="service-hero-content">
+            <h2>Services</h2>
+            <p>Comprehensive technology solutions for businesses and individuals to thrive.</p>
+        </div>
+    </div>
+    <section class="services-cards">
+        <!-- Card 1 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/laptop-pc.png" alt="Laptop Service">
+                <div class="card-overlay">
+                    <h3>Laptop / Computer Services</h3>
+                    <p>Precision repairs designed to minimize downtime and maximize productivity.</p>
+                    <a href="#" class="btn">Inquire Now</a>
+                </div>
             </div>
-
-            <!-- Hamburger Menu -->
-            <div class="menu-toggle">&#9776;</div>
-
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services" class="active">Services</a></li>
-                <li><a href="/about">About</a></li>
-
-                <li>
-                    <button class="inquire-button">Get Tech Support</button>
-                </li>
+            <ul class="cardlist">
+                <li>Laptop and computer repair</li>
+                <li>Hardware diagnostics</li>
+                <li>Software installation</li>
+                <li>Virus removal</li>
             </ul>
-
-        </nav>
-        <!-- HERO SECTION -->
-        <div class="service-hero">
-            <div class="service-hero-content">
-                <h2>Services</h2>
-                <p>Comprehensive technology solutions for businesses and individuals to thrive.</p>
-            </div>
         </div>
 
-
-        <section class="services-cards">
-
-            <!-- Card 1 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="Laptop Service">
-                    <div class="card-overlay">
-                        <h3>Laptop / Computer Services</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
+        <!-- Card 2 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/printer-services.png" alt="Printer Service">
+                <div class="card-overlay">
+                    <h3>Printer Services</h3>
+                    <p>Fast and reliable printer repair and maintenance.</p>
+                    <a href="#" class="btn">Inquire Now</a>
                 </div>
-                <ul class="cardlist">
-                    <li>Laptop and computer repair</li>
-                    <li>Hardware diagnostics</li>
-                    <li>Software installation</li>
-                    <li>Virus removal</li>
-                </ul>
             </div>
+            <ul class="cardlist">
+                <li>Printer repair</li>
+                <li>Ink & toner support</li>
+                <li>Network printers</li>
+                <li>Maintenance</li>
+            </ul>
+        </div>
 
-            <!-- Card 2 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="Printer Service">
-                    <div class="card-overlay">
-                        <h3>Printer Services</h3>
-                        <p>Fast and reliable printer repair and maintenance.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
+        <!-- Card 3 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/cctv-services.png" alt="CCTV Service">
+                <div class="card-overlay">
+                    <h3>CCTV Services</h3>
+                    <p>Professional CCTV installation and monitoring.</p>
+                    <a href="#" class="btn">Inquire Now</a>
                 </div>
-                <ul class="cardlist">
-                    <li>Printer repair</li>
-                    <li>Ink & toner support</li>
-                    <li>Network printers</li>
-                    <li>Maintenance</li>
-                </ul>
             </div>
+            <ul class="cardlist">
+                <li>CCTV setup</li>
+                <li>Camera maintenance</li>
+                <li>Remote monitoring</li>
+                <li>Upgrades</li>
+            </ul>
+        </div>
 
-            <!-- Card 3 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="CCTV Service">
-                    <div class="card-overlay">
-                        <h3>CCTV Services</h3>
-                        <p>Professional CCTV installation and monitoring.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
+        <!-- Card 4 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/network-services.png" alt="Network Service">
+                <div class="card-overlay">
+                    <h3>Network / IP / PBX Services</h3>
+                    <p>Secure and scalable network infrastructure.</p>
+                    <a href="#" class="btn">Inquire Now</a>
                 </div>
-                <ul class="cardlist">
-                    <li>CCTV setup</li>
-                    <li>Camera maintenance</li>
-                    <li>Remote monitoring</li>
-                    <li>Upgrades</li>
-                </ul>
             </div>
+            <ul class="cardlist">
+                <li>LAN / WAN setup</li>
+                <li>Firewall configuration</li>
+                <li>Wi-Fi optimization</li>
+                <li>Network security</li>
+            </ul>
+        </div>
 
-            <!-- Card 4 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="Network Service">
-                    <div class="card-overlay">
-                        <h3>Network Solutions</h3>
-                        <p>Secure and scalable network infrastructure.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
+        <!-- Card 5 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/it-consultancy.png" alt="IT Consultancy">
+                <div class="card-overlay">
+                    <h3>IT Consultancy</h3>
+                    <p>On-site and remote IT support for your business.</p>
+                    <a href="#" class="btn">Inquire Now</a>
                 </div>
-                <ul class="cardlist">
-                    <li>LAN / WAN setup</li>
-                    <li>Firewall configuration</li>
-                    <li>Wi-Fi optimization</li>
-                    <li>Network security</li>
-                </ul>
             </div>
+            <ul class="cardlist">
+                <li>Remote support</li>
+                <li>On-site troubleshooting</li>
+                <li>Software updates</li>
+                <li>System monitoring</li>
+            </ul>
+        </div>
 
-            <!-- Card 5 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="IT Support">
-                    <div class="card-overlay">
-                        <h3>IT Support</h3>
-                        <p>On-site and remote IT support for your business.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
+        <!-- Card 6 -->
+        <div class="service-card">
+            <div class="card-image">
+                <img src="/assets/img/web-deployment.png" alt="Web Base / Server System Deployment">
+                <div class="card-overlay">
+                    <h3>Web Base / Server System Deployment</h3>
+                    <p>Expert advice to optimize your IT infrastructure.</p>
+                    <a href="#" class="btn">Inquire Now</a>
                 </div>
-                <ul class="cardlist">
-                    <li>Remote support</li>
-                    <li>On-site troubleshooting</li>
-                    <li>Software updates</li>
-                    <li>System monitoring</li>
-                </ul>
             </div>
-
-            <!-- Card 6 -->
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="Assets/card-container.png" alt="IT Consulting">
-                    <div class="card-overlay">
-                        <h3>IT Consulting</h3>
-                        <p>Expert advice to optimize your IT infrastructure.</p>
-                        <a href="#" class="btn">Inquire Now</a>
-                    </div>
-                </div>
-                <ul class="cardlist">
-                    <li>System analysis</li>
-                    <li>IT strategy</li>
-                    <li>Cloud solutions</li>
-                    <li>Security audit</li>
-                </ul>
-            </div>
-
-        </section>
-
-    </header>
-
+            <ul class="cardlist">
+                <li>System analysis</li>
+                <li>IT strategy</li>
+                <li>Cloud solutions</li>
+                <li>Security audit</li>
+            </ul>
+        </div>
+    </section>
+</body>
     <footer class="footer">
 
         <div class="footer-content">
