@@ -1,6 +1,5 @@
 html {
-    scroll-behavior: initial;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     /* Changed to 'y' for vertical snapping */
 }
 
@@ -78,8 +77,6 @@ section {
 
 
 /* NAV LINKS */
-
-
 
 
 /* Social Media Links */
@@ -435,7 +432,7 @@ section {
     /* Changed from height to min-height for safety */
     width: 100%;
     scroll-snap-align: start;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     position: relative;
     /* Ensure it stays in the document flow */
     /* Layout */
@@ -458,8 +455,9 @@ section {
 /* Explicitly style the iframe so it shows up */
 
 .map-container iframe {
-    width: 300%;
-    height: 500px;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
     /* Essential: iframes need a height to be visible */
     border-radius: 12px;
     border: none;

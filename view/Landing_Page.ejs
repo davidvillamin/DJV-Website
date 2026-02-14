@@ -1,48 +1,174 @@
 <%- include("partials/header") %>
     <%- include("partials/nav") %>
-    
 
-        <body id="LandingP-body">
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+        <body id="landing-body">
 
             <!-- HERO SECTION -->
-            <section class="Landing-Hero">
+            <section class="landing-Hero">
                 <!-- HERO TEXT -->
-                <div class="Landing-welcome-text">
+                <div class="landing-welcome-text">
                     <h1>Empowering Your</h1>
                 </div>
 
-                <div class="Landing-welcome-subtext">
+                <div class="landing-welcome-subtext">
                     <h2>Technology Solutions</h2>
                 </div>
-                
+
                 <h4>Reliable services for businesses and individuals to stay connected and secure.</h4>
-                <a href="/services" class="Landing-GS-btn">Get Started</a>
-                <a href="view/About_us.ejs" class="Landing-TB-btn">Learn More</a>
+                <a href="/services" class="landing-GS-btn">Get Started</a>
+                <a href="/about" class="landing-tb-btn">Learn More</a>
             </section>
 
 
-            <section class="Landing-services-Hero">
-                <h3>Our Services</h3>
+            <!-- <section class="landing-services-Hero"> -->
+            <section class="bg-white">
+                <div class=our-service-text>
+                    <h3>Our Services</h3>
+                </div>
+                <div class="container">
+                    <ul class="nav nav-underline nav-fill" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="laptop-computer" data-bs-toggle="tab" data-bs-target="#laptop-tab-pane" type="button" role="tab" aria-controls="laptop-tab-pane" aria-selected="true">Laptop / Computer Services</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="print-services" data-bs-toggle="tab" data-bs-target="#print-tab-pane" type="button" role="tab" aria-controls="print-tab-pane" aria-selected="false">Print Services</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="cctv-services" data-bs-toggle="tab" data-bs-target="#cctv-tab-pane" type="button" role="tab" aria-controls="cctv-tab-pane" aria-selected="false">CCTV Services</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="network-services" data-bs-toggle="tab" data-bs-target="#network-tab-pane" type="button" role="tab" aria-controls="network-tab-pane" aria-selected="false">Network / IP / PBX Services</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="it-consultancy" data-bs-toggle="tab" data-bs-target="#it-tab-pane" type="button" role="tab" aria-controls="it-tab-pane" aria-selected="false">IT Consultancy</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="web-server" data-bs-toggle="tab" data-bs-target="#web-tab-pane" type="button" role="tab" aria-controls="web-tab-pane" aria-selected="false">Web Base / Server System Deployment</button>
+                        </li>
+                    </ul>
+                </div>
 
-                <nav class="Landing-services-nav">
+                <!--LAPTOP/COMPUTER-->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="laptop-tab-pane" role="tabpanel" aria-labelledby="laptop-computer" tabindex="0">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>Laptop / Computer Services</h3>
+                                        <p>We provide end-to-end support for laptops and computers, boosting performance, minimizing downtime, and extending equipment life.</p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="/assets/img/laptop1.png" alt="Laptop">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="print-tab-pane" role="tabpanel" aria-labelledby="print-services" tabindex="1">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>Printer Services</h3>
+                                        <p>We provide reliable printer and copier support that streamlines<br> document management, cuts costs, and keeps your office<br> running at peak performance.</p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="/assets/img/printer.png" alt="Printer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="cctv-tab-pane" role="tabpanel" aria-labelledby="cctv-services" tabindex="2">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>CCTV Services</h3>
+                                        <p>We deliver comprehensive planning, professional installation, and reliable<br> maintenance of CCTV systems, strengthening site security, enhancing<br> monitoring capabilities, and providing greater operational control.</p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="/assets/img/cctv-services.png" alt="CCTV">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="network-tab-pane" role="tabpanel" aria-labelledby="network-services" tabindex="3">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>Network / IP / PBX Services</h3>
+                                        <p>We specialize in the design, installation, and configuration of secure network and <br> IP-PBX systems to support reliable connectivity, efficient communication, <br>and scalable solutions that empower business
+                                            growth.
+                                        </p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="/assets/img/it.png" alt="Network">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="it-tab-pane" role="tabpanel" aria-labelledby="it-consultancy" tabindex="4">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>IT Consultancy</h3>
+                                        <p>We provide strategic IT consultancy that minimizes downtime, strengthens security,<br>and supports scalable growth.Our clear, actionable solutions simplify complex technology,<br> helping decision-makers move forward
+                                            with confidence. Even a short consultation<br> can reveal hidden gaps, risks, and opportunities.</p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="assets/img/guy-laptop.png" alt="Consultancy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="web-tab-pane" role="tabpanel" aria-labelledby="web-server" tabindex="5">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <div class="container row">
+                                    <div class="col-6 ps-5 d-flex flex-column justify-content-center">
+                                        <h3>Web Base / Server Deployment</h3>
+                                        <p>We handle the creation, deployment, and configuration of web-based and server systems,<br> ensuring reliable business applications, efficient data management,<br> and system stability aligned with operational needs.</p>
+                                        <a href="/services" class="learn-more-link">Learn More →</a>
+                                    </div>
+                                    <div class="col-6 d-flex">
+                                        <div class="landing-slide-image ms-auto">
+                                            <img src="assets/img/network.png" alt="Server">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <nav class="landing-services-nav">
                     <ul>
                         <li><a href="#" class="active" data-index="0">Laptop / Computer Services</a></li>
                         <li><a href="#" data-index="1">Printer Services</a></li>
@@ -51,77 +177,77 @@
                         <li><a href="#" data-index="4">IT Consultancy</a></li>
                         <li><a href="#" data-index="5">Web Base / Server System Deployment</a></li>
                     </ul>
-                </nav>
+                </nav> -->
 
-                <div class="Landing-slider-container">
+            <!-- <div class="landing-slider-container">
                     <button class="arrow left-arrow" onclick="scrollSlider(-1)">&#10094;</button>
 
-                    <div class="Landing-slider-wrapper" id="slider">
+                    <div class="landing-slider-wrapper" id="slider"> -->
 
-                        <!-- SLIDES -->
-                        <div class="Landing-slide">
-                            <div class="Landing-slide-content">
+            <!-- SLIDES -->
+            <!-- <div class="landing-slide">
+                            <div class="landing-slide-content">
                                 <h3>Laptop / Computer<br>Services</h3>
                                 <p>We provide end-to-end support for laptops and computers,<br>boosting performance, minimizing downtime,<br> and extending equipment life.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/laptop1.png" alt="Laptop Repair">
                             </div>
                         </div>
 
-                        <div class="Landing-slide-image">
-                            <div class="Landing-slide-content">
+                        <div class="landing-slide-image">
+                            <div class="landing-slide-content">
                                 <h3>Printer Services</h3>
                                 <p>We provide reliable printer and copier support that streamlines<br> document management, cuts costs, and keeps your office<br> running at peak performance.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/printer.png" alt="Printer">
                             </div>
                         </div>
 
-                        <div class="Landing-slide-image">
-                            <div class="Landing-slide-content">
+                        <div class="landing-slide-image">
+                            <div class="landing-slide-content">
                                 <h3>CCTV Services</h3>
                                 <p>We deliver comprehensive planning, professional installation, and reliable<br> maintenance of CCTV systems, strengthening site security, enhancing<br> monitoring capabilities, and providing greater operational control.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/cctv.png" alt="CCTV">
                             </div>
                         </div>
 
-                        <div class="Landing-slide">
-                            <div class="Landing-slide-content">
+                        <div class="landing-slide">
+                            <div class="landing-slide-content">
                                 <h3>Network / IP / PBX Services</h3>
                                 <p>We specialize in the design, installation, and configuration of secure network and <br> IP-PBX systems to support reliable connectivity, efficient communication, <br>1and scalable solutions that empower business growth.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/it.png" alt="Network">
                             </div>
                         </div>
 
-                        <div class="Landing-slide">
-                            <div class="Landing-slide-content">
+                        <div class="landing-slide">
+                            <div class="landing-slide-content">
                                 <h3>IT Consultancy</h3>
                                 <p>We provide strategic IT consultancy that minimizes downtime, strengthens security,<br>and supports scalable growth.Our clear, actionable solutions simplify complex technology,<br> helping decision-makers move forward with
                                     confidence. Even a short consultation<br> can reveal hidden gaps, risks, and opportunities.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/guy-laptop.png" alt="Consultancy">
                             </div>
                         </div>
 
-                        <div class="Landing-slide">
-                            <div class="Landing-slide-content">
+                        <div class="landing-slide">
+                            <div class="landing-slide-content">
                                 <h3>Web Base / Server Deployment</h3>
                                 <p>We handle the creation, deployment, and configuration of web-based and server systems,<br> ensuring reliable business applications, efficient data management,<br> and system stability aligned with operational needs.</p>
                                 <a href="Services_Page.html" class="learn-more-link">Learn More →</a>
                             </div>
-                            <div class="Landing-slide-image">
+                            <div class="landing-slide-image">
                                 <img src="assets/img/network.png" alt="Server">
                             </div>
                         </div>
@@ -130,17 +256,18 @@
 
 
                     <button class="arrow right-arrow" onclick="scrollSlider(1)">&#10095;</button>
-                </div>
-            </section>
+                </div> -->
+
             <!-- Map Container -->
-            <section class="Landing-map-section">
-                <div class="Landing-map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.3364730442195!2d120.90920037467713!3d14.29187238615875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d55fb430c175%3A0x22d5b6330723452a!2sDJV%20IT%20Solutions!5e0!3m2!1sen!2sph!4v1770711423527!5m2!1sen!2sph"
-                        allowfullscreen="" loading="lazy"></iframe>
-                    <h2>LOCATE US</h2>
-                </div>
+            <section class="landing-map-section bg-white">
+                <div class="landing-map-container">
+                    <div class="our-service-text">
+                        <h2>LOCATE US</h2>
+                        <iframe title="DJV IT Solutions location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.3364730442195!2d120.90920037467713!3d14.29187238615875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d55fb430c175%3A0x22d5b6330723452a!2sDJV%20IT%20Solutions!5e0!3m2!1sen!2sph!4v1770711423527!5m2!1sen!2sph"
+                            width="70%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
             </section>
-            
+
             <%- include("partials/script") %>
                 <!-- special script -->
                 <script src="/assets/js/Landing_Page.js"></script>
