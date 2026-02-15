@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Radio Canada Big', sans-serif;
+    font-family: "Radio Canada Big", sans-serif;
     margin: 0;
     /* This creates the deep blue to white fade seen in your image */
     background: linear-gradient(180deg, #00497F 0%, #156CAE 30%, #59A3DA 60%, #FFFFFF 88%);
@@ -851,7 +851,7 @@ body {
 
 #landing-body {
     color: white;
-    font-family: Radio Canada Big, sans-serif;
+    font-family: "Radio Canada Big", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -1451,7 +1451,7 @@ body {
 /*Service Page*/
 
 #service-body-bg {
-    font-family: Radio Canada Big;
+    font-family: "Radio Canada Big", sans-serif;
     background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
     display: flex;
     flex-direction: column;
@@ -1556,14 +1556,14 @@ body {
 
 .card-overlay h3 {
     margin: 0 0 10px;
-    font-family: 'Radio Canada Big';
+    font-family: "Radio Canada Big", sans-serif;
     font-size: 20px;
     font-weight: 700;
 }
 
 .card-overlay p {
     font-size: 14px;
-    font-family: 'Source Serif Pro';
+    font-family: "Source Serif Pro";
     color: black;
     margin-bottom: 20px;
 }
@@ -1606,7 +1606,7 @@ body {
 /* ================= ABOUT SECTION ================= */
 
 #body-about-bg {
-    font-family: Radio Canada Big;
+    font-family: "Radio Canada Big", sans-serif;
     background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
     display: flex;
     flex-direction: column;
@@ -1625,32 +1625,35 @@ body {
     text-align: center;
 }
 
+.about-text {
+    margin-top: -20px;
+}
+
 .hero-content {
     color: white;
     max-width: 600px;
     padding: 20px;
     margin-left: 450px;
-    margin-top: 120px;
+    margin-top: 250px;
     text-align: center;
+    align-items: center;
 }
 
 .hero-content h2 {
     font-weight: 100;
     font-size: 80px;
-    margin-bottom: 150px;
+    margin-right: 30px;
+    margin-top: -100px;
+    align-items: center;
 }
 
 .hero-content p {
     font-weight: 100;
     font-size: 20px;
     line-height: 1.6;
-}
-
-.hero-content h2,
-.hero-content p {
-    transform: translateX(25px);
     margin-right: 30px;
     margin-bottom: 50px;
+    margin-top: 50px;
     align-items: center;
 }
 
@@ -1661,7 +1664,7 @@ body {
     background-color: #6C6C6C;
     color: white;
     padding: 60px 20px 20px;
-    font-family: 'Radio Canada Big', sans-serif;
+    font-family: "Radio Canada Big", sans-serif;
 }
 
 
