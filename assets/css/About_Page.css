@@ -167,7 +167,7 @@ body {
     justify-content: center;
     text-align: center;
 }
-
+/* dalawa ung hero-content ninyo */
 .hero-content {
     color: white;
     max-width: 600px;
@@ -468,6 +468,7 @@ body {
     .inquire-button {
         display: none;
     }
+    /* dalawa ung .hero-content ninyo */
     .hero-content {
         text-align: center;
         padding: 0;
