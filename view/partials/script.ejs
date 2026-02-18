@@ -1,5 +1,12 @@
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Google Icons-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
 
 <!--Our Values - Our Mission - Our Vision Text Clickable-->
 <script>
@@ -42,161 +49,163 @@
 
 <!-- Tech Support Modal Script -->
 <script>
-    const techSupportBtn = document.getElementById('nav-tech-support');
-    const techSupportModal = document.getElementById('techSupportModal');
-    const modalCloseBtn = document.getElementById('techSupportModalCloseBtn');
-    const messageOption = document.getElementById('messageOption');
-    const callOption = document.getElementById('callOption');
-    const emailOption = document.getElementById('emailOption');
+    document.addEventListener('DOMContentLoaded', function() {
+        const techSupportBtn = document.getElementById('nav-tech-support');
+        const techSupportModal = document.getElementById('techSupportModal');
+        const modalCloseBtn = document.getElementById('techSupportModalCloseBtn');
+        const messageOption = document.getElementById('messageOption');
+        const callOption = document.getElementById('callOption');
+        const emailOption = document.getElementById('emailOption');
 
-    // Open modal when button is clicked
-    if (techSupportBtn) {
-        techSupportBtn.addEventListener('click', function() {
-            techSupportModal.classList.add('active');
-        });
-    }
+        // Open modal when button is clicked
+        if (techSupportBtn && techSupportModal) {
+            techSupportBtn.addEventListener('click', function() {
+                techSupportModal.classList.add('active');
+            });
+        }
 
-    // Close modal when close button is clicked
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', function() {
-            techSupportModal.classList.remove('active');
-        });
-    }
+        // Close modal when close button is clicked
+        if (modalCloseBtn && techSupportModal) {
+            modalCloseBtn.addEventListener('click', function() {
+                techSupportModal.classList.remove('active');
+            });
+        }
 
-    // Close modal when clicking on overlay
-    if (techSupportModal) {
-        techSupportModal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-            }
-        });
-    }
+        // Close modal when clicking on overlay
+        if (techSupportModal) {
+            techSupportModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        }
 
-    // Get the second and third modals
-    const messageModal = document.getElementById('messageModal');
-    const callModal = document.getElementById('callModal');
-    const emailModal = document.getElementById('emailModal');
-    const messageModalCloseBtn = document.getElementById('messageModalCloseBtn');
-    const messageBackBtn = document.getElementById('messageBackBtn');
-    const callModalCloseBtn = document.getElementById('callModalCloseBtn');
-    const callBackBtn = document.getElementById('callBackBtn');
-    const emailModalCloseBtn = document.getElementById('emailModalCloseBtn');
-    const emailBackBtn = document.getElementById('emailBackBtn');
+        // Get the second and third modals
+        const messageModal = document.getElementById('messageModal');
+        const callModal = document.getElementById('callModal');
+        const emailModal = document.getElementById('emailModal');
+        const messageModalCloseBtn = document.getElementById('messageModalCloseBtn');
+        const messageBackBtn = document.getElementById('messageBackBtn');
+        const callModalCloseBtn = document.getElementById('callModalCloseBtn');
+        const callBackBtn = document.getElementById('callBackBtn');
+        const emailModalCloseBtn = document.getElementById('emailModalCloseBtn');
+        const emailBackBtn = document.getElementById('emailBackBtn');
 
-    // Handle MESSAGE option
-    if (messageOption) {
-        messageOption.addEventListener('click', function() {
-            techSupportModal.classList.remove('active');
-            messageModal.classList.add('active');
-        });
-    }
+        // Handle MESSAGE option
+        if (messageOption && messageModal && techSupportModal) {
+            messageOption.addEventListener('click', function() {
+                techSupportModal.classList.remove('active');
+                messageModal.classList.add('active');
+            });
+        }
 
-    // Handle CALL option
-    if (callOption) {
-        callOption.addEventListener('click', function() {
-            techSupportModal.classList.remove('active');
-            callModal.classList.add('active');
-        });
-    }
+        // Handle CALL option
+        if (callOption && callModal && techSupportModal) {
+            callOption.addEventListener('click', function() {
+                techSupportModal.classList.remove('active');
+                callModal.classList.add('active');
+            });
+        }
 
-    // Handle EMAIL option
-    if (emailOption) {
-        emailOption.addEventListener('click', function() {
-            techSupportModal.classList.remove('active');
-            emailModal.classList.add('active');
-        });
-    }
+        // Handle EMAIL option
+        if (emailOption && emailModal && techSupportModal) {
+            emailOption.addEventListener('click', function() {
+                techSupportModal.classList.remove('active');
+                emailModal.classList.add('active');
+            });
+        }
 
-    // Message Modal - Close button
-    if (messageModalCloseBtn) {
-        messageModalCloseBtn.addEventListener('click', function() {
-            messageModal.classList.remove('active');
-        });
-    }
+        // Message Modal - Close button
+        if (messageModalCloseBtn && messageModal) {
+            messageModalCloseBtn.addEventListener('click', function() {
+                messageModal.classList.remove('active');
+            });
+        }
 
-    // Message Modal - Back button
-    if (messageBackBtn) {
-        messageBackBtn.addEventListener('click', function() {
-            messageModal.classList.remove('active');
-            techSupportModal.classList.add('active');
-        });
-    }
-
-    // Message Modal - Close when clicking on overlay
-    if (messageModal) {
-        messageModal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-            }
-        });
-    }
-
-    // Call Modal - Close button
-    if (callModalCloseBtn) {
-        callModalCloseBtn.addEventListener('click', function() {
-            callModal.classList.remove('active');
-        });
-    }
-
-    // Call Modal - Back button
-    if (callBackBtn) {
-        callBackBtn.addEventListener('click', function() {
-            callModal.classList.remove('active');
-            techSupportModal.classList.add('active');
-        });
-    }
-
-    // Call Modal - Close when clicking on overlay
-    if (callModal) {
-        callModal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-            }
-        });
-    }
-
-    // Email Modal - Close button
-    if (emailModalCloseBtn) {
-        emailModalCloseBtn.addEventListener('click', function() {
-            emailModal.classList.remove('active');
-        });
-    }
-
-    // Email Modal - Back button
-    if (emailBackBtn) {
-        emailBackBtn.addEventListener('click', function() {
-            emailModal.classList.remove('active');
-            techSupportModal.classList.add('active');
-        });
-    }
-
-    // Email Modal - Close when clicking on overlay
-    if (emailModal) {
-        emailModal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-            }
-        });
-    }
-
-    // ESC key handler for modals
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            // If a secondary modal is open, go back to first modal
-            if (messageModal && messageModal.classList.contains('active')) {
+        // Message Modal - Back button
+        if (messageBackBtn && messageModal && techSupportModal) {
+            messageBackBtn.addEventListener('click', function() {
                 messageModal.classList.remove('active');
                 techSupportModal.classList.add('active');
-            } else if (callModal && callModal.classList.contains('active')) {
+            });
+        }
+
+        // Message Modal - Close when clicking on overlay
+        if (messageModal) {
+            messageModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        }
+
+        // Call Modal - Close button
+        if (callModalCloseBtn && callModal) {
+            callModalCloseBtn.addEventListener('click', function() {
+                callModal.classList.remove('active');
+            });
+        }
+
+        // Call Modal - Back button
+        if (callBackBtn && callModal && techSupportModal) {
+            callBackBtn.addEventListener('click', function() {
                 callModal.classList.remove('active');
                 techSupportModal.classList.add('active');
-            } else if (emailModal && emailModal.classList.contains('active')) {
+            });
+        }
+
+        // Call Modal - Close when clicking on overlay
+        if (callModal) {
+            callModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        }
+
+        // Email Modal - Close button
+        if (emailModalCloseBtn && emailModal) {
+            emailModalCloseBtn.addEventListener('click', function() {
+                emailModal.classList.remove('active');
+            });
+        }
+
+        // Email Modal - Back button
+        if (emailBackBtn && emailModal && techSupportModal) {
+            emailBackBtn.addEventListener('click', function() {
                 emailModal.classList.remove('active');
                 techSupportModal.classList.add('active');
-            } else if (techSupportModal && techSupportModal.classList.contains('active')) {
-                // If first modal is open, close it
-                techSupportModal.classList.remove('active');
-            }
+            });
         }
+
+        // Email Modal - Close when clicking on overlay
+        if (emailModal) {
+            emailModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        }
+
+        // ESC key handler for modals
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                // If a secondary modal is open, go back to first modal
+                if (messageModal && messageModal.classList.contains('active')) {
+                    messageModal.classList.remove('active');
+                    techSupportModal.classList.add('active');
+                } else if (callModal && callModal.classList.contains('active')) {
+                    callModal.classList.remove('active');
+                    techSupportModal.classList.add('active');
+                } else if (emailModal && emailModal.classList.contains('active')) {
+                    emailModal.classList.remove('active');
+                    techSupportModal.classList.add('active');
+                } else if (techSupportModal && techSupportModal.classList.contains('active')) {
+                    // If first modal is open, close it
+                    techSupportModal.classList.remove('active');
+                }
+            }
+        });
     });
 </script>
 
@@ -210,4 +219,17 @@
             link.classList.add("active");
         }
     });
+</script>
+
+<!--TOGGLE MENU BAR-->
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none'
+    }
 </script>
