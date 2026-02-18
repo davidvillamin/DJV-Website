@@ -16,8 +16,8 @@ body {
     font-family: "Radio Canada Big", sans-serif;
     margin: 0;
     /* This creates the deep blue to white fade seen in your image */
-    background: linear-gradient(180deg, #00497F 0%, #156CAE 30%, #59A3DA 60%, #FFFFFF 88%);
     background-attachment: scroll;
+    background-color: #ffffff;
 }
 
 
@@ -723,18 +723,6 @@ body {
     z-index: 1000;
 }
 
-
-/* Map*/
-
-.map-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-
 /* BRAND GROUP */
 
 .brand {
@@ -932,7 +920,7 @@ body {
 }
 
 .landing-GS-btn {
-    left: 35%;
+    left: 40%;
     background-color: #2683EB;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -955,24 +943,9 @@ body {
     border: 2px solid transparent;
 }
 
-.landing-our-service-text {
-    margin-top: -100px;
-}
 
-.our-service-text {
-    color: #0F5D99;
-    background: white;
-    padding: 30px 20px;
-    text-align: center;
-    gap: 20px;
-}
 
-.our-service-text h3 {
-    font-size: clamp(28px, 5vw, 50px);
-    color: #003D81;
-    margin: 0;
-    font-weight: 300;
-}
+
 
 
 /* NAV LINKS */
@@ -1062,7 +1035,7 @@ body {
     border-radius: 8px;
     object-fit: cover;
 }
-
+ 
 
 /* Responsive Tabs */
 
@@ -1117,156 +1090,156 @@ body {
         max-height: 200px;
     }
 }
-
-
+    
 /*======end EVERYTHING ABOUT TEXT======*/
 
 
 /* Landing Services Section */
-
-
-/*
 .landing-services-Hero {
-    height: 100vh;
-    background: white;
-    position: relative;
-    padding: 60px 0;
+    background-color: white;
 }
 
-.landing-services-Hero h3 {
+/* TITLE */
+.landing-services h3 {
     color: #003D81;
-    font-size: 50px;
-    font-weight: 300;
+    font-size: 48px;
+    font-weight: 400;
     text-align: center;
-    margin: 40px 0 30px 0;
+    position: relative;
+    bottom: 30%;
 }
 
+/* NAV TABS */
 .landing-services-nav {
     width: 100%;
-    padding: 10px 100px;
+    padding: 0 80px;
 }
 
 .landing-services-nav ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .landing-services-nav li {
     flex: 1;
     text-align: center;
-    min-width: 150px;
 }
 
 .landing-services-nav a {
-    text-decoration: none;
     font-size: 14px;
-    color: #b0b0b0;
-    padding-top: 15px;
+    color: #aaa;
+    padding: 15px 0;
     display: block;
-    transition: all 0.3s ease;
-    border-top: 4px solid #f0f0f0;
+    border-top: 3px solid #eee;
 }
 
 .landing-services-nav a.active {
     color: #004a99;
-    font-weight: 700;
-    border-top: 4px solid #85c1e9;
+    font-weight: 600;
+    border-top: 3px solid #85c1e9;
 }
 
-.landing-services-nav a:hover {
-    color: #004a99;
-}
-
+/* SLIDER CONTAINER */
 .landing-slider-container {
-    position: relative;
     display: flex;
-    align-items: center;
-    padding: clamp(20px, 3vw, 40px) clamp(20px, 4vw, 60px);
-    margin-top: 20px;
-    flex: 1;
-}
+    height: 400px;
+    background: #85c1e9;
+    
+}  
 
+/* SLIDER */
 .landing-slider-wrapper {
     display: flex;
+    width: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    width: 100%;
-    gap: clamp(20px, 3vw, 30px);
 }
 
 .landing-slider-wrapper::-webkit-scrollbar {
     display: none;
 }
 
+/* SLIDE CARD */
 .landing-slide {
+    width: 100%;
     min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(20px, 3vw, 40px);
-    scroll-snap-align: start;
+    max-width: 100%;
     flex-shrink: 0;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 40px;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
 .landing-slide-content {
-    flex: 1;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.landing-slide-content h3 {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: clamp(28px, 5vw, 40px);
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.landing-slide-content p {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: clamp(14px, 2.5vw, 18px);
-    text-align: center;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.landing-slide-image {
-    flex: 1;
+    min-width: 0;
+    text-align: left;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.landing-slide-image{
+    display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    
 }
 
 .landing-slide-image img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
+    width: 380px;
+    height: 300px;
     border-radius: 4px;
+    display: flex;
+    object-fit: cover;
+    flex-shrink: 0;
+    
+    
 }
 
+
+/* Landing Services Section TEXT */
+.landing-slide-content {
+    flex: 0 1 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.landing-slide-content h3 {
+    font-size: 40px;
+    color: black;
+    font-weight: 400;
+    text-align: left;
+     position: relative;
+     left: 1vh;  
+}
+
+.landing-slide-content p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    text-align: left;
+    max-width: 600px; /* Prevents text from stretching too wide on big screens */
+    padding-left: 1%; /* Much safer than left: 10vh */
+}
+/* LEARN MORE */
 .learn-more-link {
-    display: inline-block;
-    color: #2683EB;
-    text-decoration: none;
+    color: #000;
     font-weight: 600;
-    transition: color 0.3s ease;
-    font-size: clamp(14px, 2vw, 16px);
+    text-decoration: none;
+    margin-top: 30%;
+    margin-left: 30%;
 }
-
-.learn-more-link:hover {
-    color: #0F5D99;
-}
-
 .arrow {
     background: white;
     border: 1px solid #ddd;
@@ -1282,20 +1255,49 @@ body {
     transform: translateY(-50%);
 }
 
-.arrow:hover {
+    .arrow:hover {
     background: #f0f0f0;
 }
 
-.left-arrow {
+    .left-arrow {
     left: clamp(10px, 2vw, 20px);
 }
 
-.right-arrow {
+    .right-arrow {
     right: clamp(10px, 2vw, 20px);
 }
-*/
 
 
+.learn-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Landing Map Container */
+.Landing-Map {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.landing-map-content h2 {
+    text-align: center;
+    color: #003D81;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;  
+}
+
+.landing-map-content iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
 /* RESPONSIVE MEDIA QUERIES - LANDING PAGE */
 
 
