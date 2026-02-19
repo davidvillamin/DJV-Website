@@ -56,6 +56,18 @@
         });
     }
 
+    // Inquire Now buttons (on service cards) should also open the tech support modal
+    const inquireButtons = document.querySelectorAll('.inquire-btn');
+    if (inquireButtons && inquireButtons.length) {
+        inquireButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                techSupportModal.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    }
+
     // Close modal when close button is clicked
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', function() {
