@@ -1,57 +1,28 @@
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselEl = document.querySelector('#landing-services-carousel');
+    const navLinks = document.querySelectorAll('.service-nav-link');
+    
+    // 1. Initialize Bootstrap Carousel Instance
+    const carousel = new bootstrap.Carousel(carouselEl);
 
-// Function to update the slider and nav links
-function updateSlider(index) {
-    currentIndex = index;
-    const navLinks = document.querySelectorAll('.landing-services-nav a');
-    const slider = document.getElementById('slider');
-    const slides = document.querySelectorAll('.landing-slide');
-    
-    // Move the slider to that specific slide's position
-    if (slides[index]) {
-        slider.scrollTo({
-            left: slides[index].offsetLeft,
-            behavior: 'smooth'
-        });
-    }
-    
-    // Update nav link highlighting
-    navLinks.forEach((nav, i) => {
-        if (i === index) {
-            nav.classList.add('active');
-        } else {
-            nav.classList.remove('active');
-        }
-    });
-}
-
-// Arrow button function
-function scrollSlider(direction) {
-    let newIndex = currentIndex + direction;
-    const totalSlides = document.querySelectorAll('.landing-slide').length;
-    
-    // Loop logic: back to start or jump to end
-    if (newIndex >= totalSlides) {
-        newIndex = 0;
-    } else if (newIndex < 0) {
-        newIndex = totalSlides - 1;
-    }
-    
-    updateSlider(newIndex);
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.landing-services-nav a');
-    
-    // Nav link click handler
+    // 2. Sync Nav Links -> Carousel (When you click a link)
     navLinks.forEach((link, index) => {
-        link.addEventListener('click', function(e) {
-            // Prevent the "#" from jumping the page to the top
-            e.preventDefault();
-            
-            // Update slider to the clicked nav link's index
-            updateSlider(index);
+        link.addEventListener('click', () => {
+            carousel.to(index); // Tells Bootstrap to slide to this index
         });
+    });
+
+    // 3. Sync Carousel -> Nav Links (When the slide changes via Arrows or Auto)
+    carouselEl.addEventListener('slide.bs.carousel', function (event) {
+        // 'event.to' is the index of the slide the carousel is moving to
+        const activeIndex = event.to;
+
+        // Remove active class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to the current link
+        if (navLinks[activeIndex]) {
+            navLinks[activeIndex].classList.add('active');
+        }
     });
 });
