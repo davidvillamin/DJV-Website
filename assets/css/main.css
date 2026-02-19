@@ -901,6 +901,44 @@ body.modal-open {
 
 /* NAV LINKS */
 
+.nav.nav-underline .nav-link {
+    color: gray;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+/*END**/
+
+.nav-links a.active {
+    color: #2683EB;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2683EB;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    /* ← grey */
+}
+
+.btn-primary-color:hover {
+    background-color: #90BADA;
+}
+
+.offcanvas .nav-link {
+    border-bottom: none !important;
+    padding: 12px 0;
+}
 
 
 /* Desktop nav alignment */
@@ -931,10 +969,7 @@ body.modal-open {
     overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f5465e48f8da9753277aa541a32a3ba68ab314b7
 /* Map*/
 
 .map-container {
@@ -956,12 +991,6 @@ body.modal-open {
     font-size: 10vh;
     font-family: "Source Serif Pro";
     text-align: center;
-<<<<<<< HEAD
-    
-    
-    
-=======
->>>>>>> f5465e48f8da9753277aa541a32a3ba68ab314b7
 }
 
 #landing-welcome-subtext {
@@ -982,39 +1011,6 @@ body.modal-open {
     font-size: 16px;
     transition: all 0.3s ease;
 }
-<<<<<<< HEAD
-/* mobile landing services*/
-@media (max-width: 320px) {
-    /* Landing Page*/
-  #landing-welcome-text {
-    margin-left: 60%;
-    font-size: 20px;
-  }
-
-  #landing-welcome-subtext {
-    margin-left: 60%;
-    
-  }
-  
-
-
-}
-
-/* ETO YUNG PANG PAAYOS NG POSITIONING SA MGA IMAGES AND FOTS SA OUR SERVICE SECTION SA LANDING PAGE*/
-
-.tab-content {
-    background: white;
-    padding: 40px 20px;
-}
-
-.tab-pane {
-    animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-=======
 
 
 /* mobile landing services*/
@@ -1024,7 +1020,6 @@ body.modal-open {
     #landing-welcome-text {
         margin-left: 60%;
         font-size: 20px;
->>>>>>> f5465e48f8da9753277aa541a32a3ba68ab314b7
     }
     #landing-welcome-subtext {
         margin-left: 60%;
@@ -1251,7 +1246,6 @@ img-wrapper {
     justify-content: center;
     padding: 0 20px;
     box-sizing: border-box;
-    margin-top: 15%;
 }
 
 .landing-map-content h2 {
