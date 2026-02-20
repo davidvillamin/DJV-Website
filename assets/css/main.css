@@ -446,11 +446,8 @@ main,
 .message-option-btn {
     display: flex;
     align-items: center;
-    /* Vertically centers icon and text */
     justify-content: center;
-    /* Horizontally centers the group */
     flex-direction: row;
-    /* FIX: Changed from column to row */
     padding: 16px 20px;
     border-radius: 8px;
     text-decoration: none;
@@ -465,7 +462,6 @@ main,
 .message-option-btn i {
     margin-right: 12px;
     font-size: 20px;
-    /* Makes the icon slightly larger */
 }
 
 .message-option-btn:hover {
@@ -734,25 +730,20 @@ body.modal-open {
     html {
         overflow-x: hidden;
     }
-    /* modal padding smaller */
     .tech-support-modal {
         padding: 16px 12px 18px;
     }
-    /* cards smaller */
     .support-option {
         min-height: 54px;
         padding: 10px 8px;
     }
-    /* icons smaller */
     .support-option i {
         font-size: 19px;
     }
-    /* label smaller */
     .support-option h3 {
         font-size: 12px;
         margin-top: 4px;
     }
-    /* close button */
     .modal-close-btn {
         font-size: 22px;
         top: 8px;
@@ -761,12 +752,10 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
-    /* overlay stays same */
     .tech-support-modal-overlay {
         align-items: flex-end !important;
         padding: 0;
     }
-    /* turn modal into bottom sheet */
     .tech-support-modal {
         width: 100%;
         max-width: 100%;
@@ -774,7 +763,6 @@ body.modal-open {
         padding: 22px 18px 28px;
         animation: slideUpMobile .35s ease;
     }
-    /* drag handle (optional but modern look) */
     .tech-support-modal::before {
         content: "";
         width: 50px;
@@ -784,7 +772,6 @@ body.modal-open {
         display: block;
         margin: 0 auto 18px;
     }
-    /* bigger touch targets */
     .support-option,
     .message-option-btn,
     .phone-link-btn,
@@ -793,7 +780,6 @@ body.modal-open {
         font-size: 16px;
         border-radius: 14px;
     }
-    /* stack buttons nicely */
     .support-options {
         flex-direction: column;
         gap: 12px;
@@ -808,7 +794,6 @@ body.modal-open {
         flex-direction: column;
         gap: 12px;
     }
-    /* close button mobile position */
     .modal-close-btn {
         top: 10px;
         right: 14px;
@@ -873,7 +858,6 @@ body.modal-open {
 
 .nav-link {
     color: inherit;
-    /* keeps your original color */
 }
 
 .nav-link:hover {
@@ -954,25 +938,13 @@ body.modal-open {
 }
 
 
-/* Desktop nav alignment */
-
-@media (min-width: 992px) {
-    html {
-        overflow-x: hidden;
-    }
-    .navbar-nav .nav-link {
-        margin-right: 15px;
-    }
-}
-
-
 /* Tech support button style */
 
 .tech-support-btn {
     background-color: #90BADA;
     border-color: #90BADA;
     color: white;
-    border-radius: 20px;
+    border-radius: 50px;
     padding: 6px 18px;
     transition: all 0.3s ease;
 }
@@ -982,6 +954,18 @@ body.modal-open {
     border-color: #a6c9e4;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Desktop nav alignment */
+
+@media (min-width: 992px) {
+    html {
+        overflow-x: hidden;
+    }
+    .navbar-nav .nav-link {
+        margin-right: 15px;
+    }
 }
 
 
@@ -1051,11 +1035,8 @@ body.modal-open {
     /* Landing Services*/
     .service-nav-link.active {
         color: #0056b3;
-        /* Dark Blue text */
         border-bottom: 3px solid #0056b3;
-        /* The blue underline bar */
         opacity: 1;
-        /* Bootstrap override */
     }
 }
 
@@ -1069,17 +1050,11 @@ body.modal-open {
 
 .service-box {
     background-color: #E2EFF6;
-    /* The light blue color from your image */
     overflow: hidden;
-    /* Ensures image corners don't poke out */
     min-height: 400px;
-    /* Adjust based on preference */
     min-height: 420px;
-    /* A consistent height for all service boxes */
     display: flex;
-    /* Use flexbox for alignment */
     align-items: center;
-    /* Vertically center the content (.row) */
     border-radius: 8px;
     max-width: 3000px;
 }
@@ -1091,7 +1066,6 @@ body.modal-open {
     background: none;
     border: none;
     color: #999;
-    /* Grey text for inactive */
     font-weight: 600;
     font-size: 14px;
     padding-bottom: 10px;
@@ -1106,15 +1080,9 @@ body.modal-open {
 
 .service-nav-link.active {
     color: #0056b3;
-    /* Dark Blue text */
     border-bottom: 3px solid #0056b3;
-    /* The blue underline bar */
     opacity: 1;
-    /* Bootstrap override */
 }
-
-
-/* 3. Typography inside the box */
 
 .service-title {
     font-weight: 800;
@@ -1141,15 +1109,10 @@ body.modal-open {
     text-decoration: underline;
 }
 
-
-/* 4. Image Styling */
-
 .service-img {
     height: 100%;
     object-fit: cover;
     min-height: 400px;
-    /* Matches the container height */
-    /* This class is applied inconsistently. Styling via wrapper is more robust. */
 }
 
 
@@ -1157,13 +1120,12 @@ body.modal-open {
 
 .img-wrapper {
     height: 380px;
-    /* A fixed height for the image container */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-img-wrapper {
+.img-wrapper {
     width: 524px;
     height: 378px;
 }
@@ -1172,28 +1134,19 @@ img-wrapper {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
-    /* Fits the entire image within the container, preserving aspect ratio */
 }
 
 .carousel-control-prev,
 .carousel-control-next .carousel-control-prev,
 .carousel-control-next {
     width: 50px;
-    /* Fixed width for the button */
     height: 50px;
-    /* Fixed height for the button */
     top: 50%;
-    /* Move to the middle of the carousel */
     transform: translateY(-50%);
-    /* Perfectly center it vertically */
     opacity: 0.8;
     position: absolute;
-    /* Ensure it's relative to #Landing-Servi-Carousel */
     z-index: 5;
 }
-
-
-/* 2. Move them outside the container */
 
 .carousel-control-prev {
     left: -80px;
@@ -1203,38 +1156,20 @@ img-wrapper {
     right: -80px;
 }
 
-
-/* 3. Style the Icons inside */
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%);
-    /* Makes white icons black/dark */
     background-color: rgba(0, 0, 0, 0.1);
-    /* Subtle circle background */
     border-radius: 50%;
     width: 100%;
-    /* Fill the 50px container */
     height: 100%;
-    /* Fill the 50px container */
     background-size: 50%;
-    /* Shrink the arrow inside the circle */
 }
-
-
-/* 4. Hover effect */
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     opacity: 1;
 }
-
-
-/* 5. IMPORTANT: Mobile Fix */
-
-
-/* On small screens, -80px will push the arrows off the screen. 
-   We should move them back inside for mobile. */
 
 @media (max-width: 992px) {
     .carousel-control-prev {
@@ -1543,7 +1478,6 @@ img-wrapper {
 
 .card:hover .card-image img {
     transform: translateY(100%);
-    /* slide image down to reveal overlay */
 }
 
 
@@ -1651,7 +1585,6 @@ img-wrapper {
 /*=========ABOUT SECTION MOBILE============*/
 
 @media (max-width: 354px) {
-    /* Hero Section */
     section[style*="60vh"] {
         height: 50vh !important;
         padding: 20px;
@@ -1663,24 +1596,20 @@ img-wrapper {
         font-size: 16px !important;
         padding: 0 15px;
     }
-    /* Remove fixed height */
     .container-fluid.py-3.text-center {
         height: auto !important;
         padding-bottom: 60px;
     }
-    /* Nav tabs spacing */
     #custom-nav .nav-link {
         font-size: 14px;
         padding-top: 15px;
     }
-    /* Acronym section */
     .acronym-letter {
         font-size: 2.5rem;
     }
     #acronym-container span.fs-4 {
         font-size: 16px !important;
     }
-    /* Mission / Vision */
     #mission-content h1,
     #vision-content h1 {
         font-size: 2rem !important;

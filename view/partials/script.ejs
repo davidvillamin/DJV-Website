@@ -7,34 +7,26 @@
 <!--Our Values - Our Mission - Our Vision Text Clickable-->
 <script>
     function updateNav(position, element, section) {
-        // 1. Move the blue line
+
         const navLine = document.getElementById('nav-line');
         if (navLine) navLine.style.left = position;
-
-        // 2. Reset navigation link colors
         const links = document.querySelectorAll('#custom-nav .nav-link');
         links.forEach(link => {
             link.classList.remove('text-info', 'fw-bold');
             link.classList.add('text-white-50');
         });
-
-        // 3. Highlight current link
         element.classList.add('text-info', 'fw-bold');
         element.classList.remove('text-white-50');
-
-        // 4. Get the containers
         const acronym = document.getElementById('acronym-container');
         const mission = document.getElementById('mission-content');
         const vision = document.getElementById('vision-content');
 
-        // 5. HIDE ALL (Ensures no overlap and resets spacing)
         acronym.style.display = 'none';
         mission.style.display = 'none';
         vision.style.display = 'none';
 
-        // 6. SHOW ONLY THE ONE CLICKED
         if (section === 'values') {
-            acronym.style.display = 'flex'; // Flex for centering the acronym
+            acronym.style.display = 'flex';
         } else if (section === 'mission') {
             mission.style.display = 'block';
         } else if (section === 'vision') {
@@ -52,33 +44,36 @@
     const callOption = document.getElementById('callOption');
     const emailOption = document.getElementById('emailOption');
 
-    // Open modal when button is clicked
+
     if (techSupportBtn) {
         techSupportBtn.addEventListener('click', function() {
             techSupportModal.classList.add('active');
         });
     }
 
-    // Inquire Now buttons (on service cards) should also open the tech support modal
+
     const inquireButtons = document.querySelectorAll('.inquire-btn');
     if (inquireButtons && inquireButtons.length) {
         inquireButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 techSupportModal.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     }
 
-    // Close modal when close button is clicked
+
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', function() {
             techSupportModal.classList.remove('active');
         });
     }
 
-    // Close modal when clicking on overlay
+
     if (techSupportModal) {
         techSupportModal.addEventListener('click', function(e) {
             if (e.target === this) {
@@ -87,7 +82,7 @@
         });
     }
 
-    // Get the second and third modals
+
     const messageModal = document.getElementById('messageModal');
     const callModal = document.getElementById('callModal');
     const emailModal = document.getElementById('emailModal');
@@ -98,7 +93,6 @@
     const emailModalCloseBtn = document.getElementById('emailModalCloseBtn');
     const emailBackBtn = document.getElementById('emailBackBtn');
 
-    // Handle MESSAGE option
     if (messageOption) {
         messageOption.addEventListener('click', function() {
             techSupportModal.classList.remove('active');
@@ -106,7 +100,6 @@
         });
     }
 
-    // Handle CALL option
     if (callOption) {
         callOption.addEventListener('click', function() {
             techSupportModal.classList.remove('active');
@@ -185,7 +178,7 @@
         });
     }
 
-    // Email Modal - Close when clicking on overlay
+
     if (emailModal) {
         emailModal.addEventListener('click', function(e) {
             if (e.target === this) {
@@ -197,7 +190,7 @@
     // ESC key handler for modals
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-            // If a secondary modal is open, go back to first modal
+
             if (messageModal && messageModal.classList.contains('active')) {
                 messageModal.classList.remove('active');
                 techSupportModal.classList.add('active');
@@ -208,7 +201,6 @@
                 emailModal.classList.remove('active');
                 techSupportModal.classList.add('active');
             } else if (techSupportModal && techSupportModal.classList.contains('active')) {
-                // If first modal is open, close it
                 techSupportModal.classList.remove('active');
             }
         }
