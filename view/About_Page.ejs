@@ -11,7 +11,7 @@
                     <p>Helping you fix, connect, and secure your tech since 2016.</p>
                 </div>
             </section> -->
-            <section class="d-flex align-items-center justify-content-center" style="height: 60vh;">
+            <section class="d-flex align-items-center justify-content-center" style="height: 90vh;">
                 <div class="align-items-center text-center">
                     <h2 style="font-size: 10vh; line-height: 1.2" class="text-white">About</h2>
                     <p class="text-white mt-4" style="font-size: 3vh;">Helping you fix, connect, and secure your tech since 2016.</p>
@@ -22,23 +22,42 @@
                 <div class="nav-wrapper mx-auto mb-5" style="max-width: 900px; position: relative;">
                     <div style="height: 2px; width: 100%; background-color: rgba(255, 255, 255, 0.2); position: absolute; top: 0; left: 0;"></div>
                     <div id="nav-line" class="bg-info" style="height: 2px; width: 33.33%; position: absolute; top: 0; left: 0%; transition: left 0.4s ease;"></div>
-
                     <ul class="nav nav-justified" id="custom-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-info fw-bold" onclick="updateNav('0%', this, 'values')">Our Values</a>
+                            <a class="nav-link text-info fw-bold" onclick="updateNav('0%', this, 'mission')">Our Mission</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" onclick="updateNav('33.33%', this, 'mission')">Our Mission</a>
+                            <a class="nav-link text-white-50" onclick="updateNav('33.33%', this, 'vision')">Our Vision</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" onclick="updateNav('66.66%', this, 'vision')">Our Vision</a>
+                            <a class="nav-link text-white-50" onclick="updateNav('66.66%', this, 'values')">Our Values</a>
                         </li>
                     </ul>
                 </div>
                 <!---ACRONYM HERE--->
                 <div id="about-content-area" class="mt-5">
-
-                    <div id="acronym-container" class="flex-column align-items-center" style="display: flex;">
+                    <div id="mission-content" class="container text-start mx-auto" style="max-width: 700px;  padding-top: 50px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3" style="width: 40px; height: 40px;">
+                                <img src="/assets/img/ICON_FINAL.png" class="img-fluid" alt="Logo">
+                            </div>
+                            <h1 class="text-white fst-italic" style="font-family: serif; font-size: 3.5rem;">Mission</h1>
+                        </div>
+                        <p class="text-white fs-5 lh-lg">Our mission is to build technology that will make life easier and business smarter. We are committed to create secure, reliable and innovative solutions that will help our customers grow, adapt, and succeed in a fast-changing digital
+                            world.
+                        </p>
+                    </div>
+                    <div id="vision-content" class="container text-start mx-auto" style="max-width: 700px; display: none; padding-top: 50px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3" style="width: 40px; height: 40px;">
+                                <img src="/assets/img/ICON_FINAL.png" class="img-fluid" alt="Logo">
+                            </div>
+                            <h1 class="text-white fst-italic" style="font-family: serif; font-size: 3.5rem;">Vision</h1>
+                        </div>
+                        <p class="text-white fs-5 lh-lg">To be the Philippines’ leading next generation technology solutions and services provider. We aim to be the trusted partner that helps businesses thrive in the digital age- delivering technology solutions that are innovative, reliable
+                            and built around the needs of our customers.</p>
+                    </div>
+                    <div id="acronym-container" class="flex-column align-items-center" style="display: none;">
                         <div style="text-align: left; display: inline-block; padding-top: 50px;">
                             <div class="d-flex align-items-baseline mb-3">
                                 <span class="acronym-letter">C</span>
@@ -62,30 +81,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="mission-content" class="container text-start mx-auto" style="max-width: 700px; display: none; padding-top: 50px;">
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="me-3" style="width: 40px; height: 40px;">
-                                <img src="/assets/img/ICON_FINAL.png" class="img-fluid" alt="Logo">
-                            </div>
-                            <h1 class="text-white fst-italic" style="font-family: serif; font-size: 3.5rem;">Mission</h1>
-                        </div>
-                        <p class="text-white fs-5 lh-lg">Our mission is to build technology that will make life easier and business smarter. We are committed to create secure, reliable and innovative solutions that will help our customers grow, adapt, and succeed in a fast-changing digital
-                            world.
-                        </p>
-                    </div>
-
-                    <div id="vision-content" class="container text-start mx-auto" style="max-width: 700px; display: none; padding-top: 50px;">
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="me-3" style="width: 40px; height: 40px;">
-                                <img src="/assets/img/ICON_FINAL.png" class="img-fluid" alt="Logo">
-                            </div>
-                            <h1 class="text-white fst-italic" style="font-family: serif; font-size: 3.5rem;">Vision</h1>
-                        </div>
-                        <p class="text-white fs-5 lh-lg">To be the Philippines’ leading next generation technology solutions and services provider. We aim to be the trusted partner that helps businesses thrive in the digital age- delivering technology solutions that are innovative, reliable
-                            and built around the needs of our customers.</p>
-                    </div>
-
                 </div>
             </div>
 
@@ -116,6 +111,9 @@
             </style>
         </body>
 
+        <!--/* ===============================
+           REIGNIER G. DAHUNOG  2026
+        =============================== */-->
         <%- include("partials/script") %>
             <!-- special script -->
             <script src="/assets/js/About_page.js"></script>
