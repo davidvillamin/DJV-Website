@@ -28,7 +28,6 @@ body {
     width: 100%;
     height: auto;
     padding: 20px 20px;
-    /* adjust the black background */
     overflow: hidden;
     position: sticky;
     top: 0;
@@ -59,7 +58,6 @@ body {
 .brand-text {
     height: 26px;
     width: auto;
-    /* tweak until it looks right */
     display: block;
 }
 
@@ -161,13 +159,12 @@ body {
 /* HERO SECTION */
 
 .hero {
-    /*min-height: calc(100svh - 64px);*/
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-/* dalawa ung hero-content ninyo */
+
 .hero-content {
     color: white;
     max-width: 600px;

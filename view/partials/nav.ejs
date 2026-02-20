@@ -338,7 +338,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
 
-                // If a secondary modal is open, go back to first modal
+
                 if (messageModal && messageModal.classList.contains('active')) {
                     messageModal.classList.remove('active');
                     techSupportModal.classList.add('active');
@@ -352,7 +352,7 @@
                     techSupportModal.classList.add('active');
 
                 } else if (techSupportModal && techSupportModal.classList.contains('active')) {
-                    // If first modal is open, close it
+
                     techSupportModal.classList.remove('active');
                 }
 
