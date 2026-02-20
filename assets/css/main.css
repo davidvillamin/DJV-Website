@@ -16,7 +16,9 @@ body {
     flex-direction: column;
 }
 
+
 /* Make main content expand so footer is pushed down when content grows */
+
 main,
 #landing-body,
 #service-body-bg,
@@ -933,9 +935,13 @@ body.modal-open {
     background-color: #2683EB;
 }
 
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(255, 255, 255);
-    /* ← grey */
 }
 
 .btn-primary-color:hover {
@@ -1287,180 +1293,6 @@ img-wrapper {
 /*======end======*/
 
 
-/* Landing Services Section */
-
-
-/*
-.landing-services-Hero {
-    height: 100vh;
-    background: white;
-    position: relative;
-    padding: 60px 0;
-}
-
-.landing-services-Hero h3 {
-    color: #003D81;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    margin: 40px 0 30px 0;
-}
-
-.landing-services-nav {
-    width: 100%;
-    padding: 10px 100px;
-}
-
-.landing-services-nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    flex-wrap: wrap;
-}
-
-.landing-services-nav li {
-    flex: 1;
-    text-align: center;
-    min-width: 150px;
-}
-
-.landing-services-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #b0b0b0;
-    padding-top: 15px;
-    display: block;
-    transition: all 0.3s ease;
-    border-top: 4px solid #f0f0f0;
-}
-
-.landing-services-nav a.active {
-    color: #004a99;
-    font-weight: 700;
-    border-top: 4px solid #85c1e9;
-}
-
-.landing-services-nav a:hover {
-    color: #004a99;
-}
-
-.landing-slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: clamp(20px, 3vw, 40px) clamp(20px, 4vw, 60px);
-    margin-top: 20px;
-    flex: 1;
-}
-
-.landing-slider-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    width: 100%;
-    gap: clamp(20px, 3vw, 30px);
-}
-
-.landing-slider-wrapper::-webkit-scrollbar {
-    display: none;
-}
-
-.landing-slide {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(20px, 3vw, 40px);
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    padding: 0 20px;
-}
-
-.landing-slide-content {
-    flex: 1;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.landing-slide-content h3 {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: clamp(28px, 5vw, 40px);
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.landing-slide-content p {
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: clamp(14px, 2.5vw, 18px);
-    text-align: center;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.landing-slide-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.landing-slide-image img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 4px;
-}
-
-.learn-more-link {
-    display: inline-block;
-    color: #2683EB;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    font-size: clamp(14px, 2vw, 16px);
-}
-
-.learn-more-link:hover {
-    color: #0F5D99;
-}
-
-.arrow {
-    background: white;
-    border: 1px solid #ddd;
-    color: #2683EB;
-    font-size: clamp(16px, 2vw, 18px);
-    padding: clamp(5px 8px, 1vw, 6px 10px);
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 10;
-    transition: 0.3s;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.arrow:hover {
-    background: #f0f0f0;
-}
-
-.left-arrow {
-    left: clamp(10px, 2vw, 20px);
-}
-
-.right-arrow {
-    right: clamp(10px, 2vw, 20px);
-}
-*/
-
-
 /* Tablet (768px and below) */
 
 @media (max-width: 768px) {
@@ -1620,10 +1452,12 @@ img-wrapper {
 
 
 /*======SERVICE PAGE======*/
+
 #body-services-bg {
     font-family: "Radio Canada Big", sans-serif;
     background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
 }
+
 
 /* SERVICES CARD-LIST */
 
@@ -1649,7 +1483,9 @@ img-wrapper {
     color: #0d6efd;
 }
 
+
 /* ================= SERVICES CARDS (Image-front hover reveal) ================= */
+
 .card {
     overflow: hidden;
     background: #fff;
@@ -1682,8 +1518,9 @@ img-wrapper {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 2; /* image sits on top */
-    transition: transform 0.6s cubic-bezier(.2,.9,.2,1);
+    z-index: 2;
+    /* image sits on top */
+    transition: transform 0.6s cubic-bezier(.2, .9, .2, 1);
 }
 
 .card .card-image .card-overlay {
@@ -1694,7 +1531,8 @@ img-wrapper {
     height: 100%;
     padding: 18px;
     box-sizing: border-box;
-    z-index: 1; /* overlay sits beneath the image */
+    z-index: 1;
+    /* overlay sits beneath the image */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1704,8 +1542,10 @@ img-wrapper {
 }
 
 .card:hover .card-image img {
-    transform: translateY(100%); /* slide image down to reveal overlay */
+    transform: translateY(100%);
+    /* slide image down to reveal overlay */
 }
+
 
 /*SERVICE OVERLAY TEXT*/
 
@@ -1778,116 +1618,6 @@ img-wrapper {
     font-weight: 300;
     font-size: 20px;
     line-height: 1.6;
-}
-
-
-/* 
-
-.footer {
-    background-color: #6C6C6C;
-    color: white;
-    font-family: "Radio Canada Big", sans-serif;
-}
-
-
-/* GRID LAYOUT 
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* COLUMN 
-
-.footer-col {
-    min-width: 0;
-}
-
-
-/* Logo column 
-
-.footer-col:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-
-/* Social icons 
-
-.footer .social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.footer .social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-
-/* Headings 
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 18px;
-    font-weight: 500;
-}
-
-
-/* Lists 
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-
-/* Links 
-
-.footer-col a {
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-
-/* Contact text 
-
-.footer-col span {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-
-/* Bottom copyright 
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
 }
 
 
