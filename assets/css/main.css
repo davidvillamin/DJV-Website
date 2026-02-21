@@ -1,0 +1,1721 @@
+/*======ReignierDahunog2026CS======*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Make main content expand so footer is pushed down when content grows */
+
+main,
+#landing-body,
+#service-body-bg,
+#body-about-bg,
+.tab-content,
+.message-page-container {
+    flex: 1 0 auto;
+}
+
+
+/* ================= MESSAGE PAGE ================= */
+
+.message-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 40px 20px;
+}
+
+.message-content {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.message-content h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.message-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.messaging-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.message-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.messenger {
+    background: #0084FF;
+}
+
+.messenger:hover {
+    background: #0073E6;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1EBE57;
+}
+
+.viber {
+    background: #7B519C;
+}
+
+.viber:hover {
+    background: #6A4685;
+}
+
+.option-circle {
+    font-size: 20px;
+}
+
+
+/* ================= CALL PAGE ================= */
+
+.call-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 40px 20px;
+}
+
+.call-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.phone-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.phone-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.phone-icon svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.phone-card h2 {
+    color: #0d6efd;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.phone-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-row a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.phone-row a:hover {
+    color: #0d6efd;
+}
+
+.fax-row {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.fax-label {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .message-content {
+        padding: 25px;
+    }
+    .message-content h1 {
+        font-size: 20px;
+    }
+    .message-option {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+    .phone-card {
+        padding: 25px;
+    }
+    .phone-card h2 {
+        font-size: 18px;
+    }
+    .phone-row a {
+        font-size: 14px;
+    }
+}
+
+
+/* ================= TECH SUPPORT MODAL ================= */
+
+.tech-support-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-support-modal-overlay.active {
+    display: flex;
+}
+
+.tech-support-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 60px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-support-modal h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    color: #000;
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.support-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #FAFAFA;
+}
+
+.support-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+
+/* MESSAGE OPTION - BLUE */
+
+.support-option.message-option h3 {
+    color: #0d6efd;
+}
+
+.support-option.message-option {
+    border-color: #0d6efd;
+}
+
+.support-option.message-option i {
+    color: #0d6efd;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.message-option:hover {
+    background: #E7F1FF;
+    border-color: #0d6efd;
+}
+
+
+/* CALL OPTION - GREEN */
+
+.support-option.call-option h3 {
+    color: #28a745;
+}
+
+.support-option.call-option {
+    border-color: #28a745;
+}
+
+.support-option.call-option i {
+    color: #28a745;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.call-option:hover {
+    background: #E8F5E9;
+    border-color: #28a745;
+}
+
+
+/* EMAIL OPTION - ORANGE */
+
+.support-option.email-option h3 {
+    color: #ff9800;
+}
+
+.support-option.email-option {
+    border-color: #ff9800;
+}
+
+.support-option.email-option i {
+    color: #ff9800;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.support-option.email-option:hover {
+    background: #FFF3E0;
+    border-color: #ff9800;
+}
+
+.option-icon {
+    color: #0d6efd;
+    margin-bottom: 12px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.support-option h3 {
+    margin: 0;
+    color: #0d6efd;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= MODAL SECONDARY STYLES ================= */
+
+.modal-back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.modal-back-btn:hover {
+    color: #000;
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+
+/* Messaging Options */
+
+.messaging-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-option-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.message-option-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.message-option-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.messenger {
+    background: #0084FF;
+}
+
+.messenger:hover {
+    background: #0073E6;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1EBE57;
+}
+
+.viber {
+    background: #7B519C;
+}
+
+.viber:hover {
+    background: #6A4685;
+}
+
+
+/* Phone Numbers Modal */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.phone-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.phone-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: #0d6efd;
+}
+
+
+/* Phone Link Button Style */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.phone-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.phone-section-label {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.phone-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: #28a745;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.phone-link-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.phone-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Phone Link Button Style */
+
+.phone-numbers-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.phone-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.phone-section-label {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.phone-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: #28a745;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.phone-link-btn i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.phone-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fax-group {
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.fax-label {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* Email Options */
+
+.email-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.email-option-btn {
+    display: block;
+    padding: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.email-option-btn:hover {
+    border-color: #ff9800;
+    background: #FFF3E0;
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.email-option-btn strong {
+    color: #ff9800;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email-option-btn span {
+    color: #666;
+    font-size: 13px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* ===== MOBILE MODAL MODE ===== */
+
+
+/* ===== PHONE SIZE ADJUSTMENT ===== */
+
+@media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        overflow-x: hidden;
+    }
+    .support-option {
+        min-height: 48px;
+        padding: 8px 6px;
+    }
+    .support-option i {
+        font-size: 20px;
+    }
+    .support-option h3 {
+        font-size: 11px;
+    }
+    .tech-support-modal::before {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        overflow-x: hidden;
+    }
+    .tech-support-modal {
+        padding: 16px 12px 18px;
+    }
+    .support-option {
+        min-height: 54px;
+        padding: 10px 8px;
+    }
+    .support-option i {
+        font-size: 19px;
+    }
+    .support-option h3 {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+    .modal-close-btn {
+        font-size: 22px;
+        top: 8px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-support-modal-overlay {
+        align-items: flex-end !important;
+        padding: 0;
+    }
+    .tech-support-modal {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 18px 18px 0 0;
+        padding: 22px 18px 28px;
+        animation: slideUpMobile .35s ease;
+    }
+    .tech-support-modal::before {
+        content: "";
+        width: 50px;
+        height: 5px;
+        background: #bbb;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto 18px;
+    }
+    .support-option,
+    .message-option-btn,
+    .phone-link-btn,
+    .email-option-btn {
+        min-height: 60px;
+        font-size: 16px;
+        border-radius: 14px;
+    }
+    .support-options {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .phone-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .messaging-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .modal-close-btn {
+        top: 10px;
+        right: 14px;
+        font-size: 26px;
+    }
+}
+
+
+/* animation */
+
+@keyframes slideUpMobile {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*==========MAIN NAVBAR============= */
+
+
+/* Navbar background */
+
+.navbar {
+    background-color: #000;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo text */
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/* Button style */
+
+.btn-primary {
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Burger menu size */
+
+.navbar-toggler {
+    border: none;
+}
+
+
+/* NAV LINKS Eto yung mag hhighlights ng color sa may navigation bar. home/services/about */
+
+.nav-link {
+    color: inherit;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+
+.nav-link.active {
+    color: #0d6efd !important;
+    border-bottom: 2px solid #0d6efd;
+}
+
+
+/*END**/
+
+
+/*============= Hover sa Our service sa may landing page=================*/
+
+.nav.nav-underline .nav-link:hover {
+    color: #0d6efd !important;
+    border-bottom: 2px solid #0d6efd;
+}
+
+
+/* Active */
+
+.nav.nav-underline .nav-link.active {
+    color: #0d6efd !important;
+    border-bottom: 2px solid #0d6efd;
+}
+
+
+/* NAV LINKS */
+
+.nav.nav-underline .nav-link {
+    color: gray;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+/*END**/
+
+.nav-links a.active {
+    color: #2683EB;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2683EB;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.btn-primary-color:hover {
+    background-color: #90BADA;
+}
+
+.offcanvas .nav-link {
+    border-bottom: none !important;
+    padding: 12px 0;
+}
+
+
+/* Tech support button style */
+
+.tech-support-btn {
+    background-color: #90BADA;
+    border-color: #90BADA;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 18px;
+    transition: all 0.3s ease;
+}
+
+.tech-support-btn:hover {
+    background-color: #a6c9e4;
+    border-color: #a6c9e4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Desktop nav alignment */
+
+@media (min-width: 992px) {
+    html {
+        overflow-x: hidden;
+    }
+    .navbar-nav .nav-link {
+        margin-right: 15px;
+    }
+}
+
+
+/*=============LANDING PAGE==============*/
+
+#landing-body {
+    background: linear-gradient(180deg, #004282 0%, #76b1e4 60%, #ffffff 100%);
+    min-height: 80vh;
+    overflow-x: hidden;
+}
+
+
+/* Map*/
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+/*======EVERYTHING ABOUT TEXT======*/
+
+#landing {
+    padding-top: 200px;
+}
+
+#landing-welcome-text {
+    font-size: 10vh;
+    font-family: "Source Serif Pro";
+    text-align: center;
+}
+
+#landing-welcome-subtext {
+    font-family: "Radio Canada Big";
+    font-weight: 100;
+    font-size: 10vh;
+    color: black;
+    height: 100;
+}
+
+#landing-welcome-subscript {
+    font-family: "Radio Canada Big";
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+#landing-welcomce-getstarted {
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+
+/* mobile landing services*/
+
+@media (max-width: 320px) {
+    /* Landing Page*/
+    #landing-welcome-text {
+        margin-left: 60%;
+        font-size: 20px;
+    }
+    #landing-welcome-subtext {
+        margin-left: 60%;
+    }
+    /* Landing Services*/
+    .service-nav-link.active {
+        color: #0056b3;
+        border-bottom: 3px solid #0056b3;
+        opacity: 1;
+    }
+}
+
+
+/* Landing Services Section */
+
+#landing-services {
+    position: relative;
+    top: 180px;
+}
+
+.service-box {
+    background-color: #E2EFF6;
+    overflow: hidden;
+    min-height: 400px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 3000px;
+}
+
+
+/* 2. NavLink */
+
+.service-nav-link {
+    background: none;
+    border: none;
+    color: #999;
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    text-align: center;
+    max-width: 150px;
+}
+
+
+/* The active state for the top nav */
+
+.service-nav-link.active {
+    color: #0056b3;
+    border-bottom: 3px solid #0056b3;
+    opacity: 1;
+}
+
+.service-title {
+    font-weight: 800;
+    color: #000;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.service-desc {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-link {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+.service-img {
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+
+/* Carousel */
+
+.img-wrapper {
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-wrapper {
+    width: 524px;
+    height: 378px;
+}
+
+.img-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.carousel-control-prev,
+.carousel-control-next .carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    position: absolute;
+    z-index: 5;
+}
+
+.carousel-control-prev {
+    left: -80px;
+}
+
+.carousel-control-next {
+    right: -80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .carousel-control-prev {
+        left: 5px;
+    }
+    .carousel-control-next {
+        right: 5px;
+    }
+}
+
+
+/* LEARN MORE */
+
+.learn-more-link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 30%;
+    margin-left: 30%;
+}
+
+.learn-more-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Landing Map Container */
+
+.Landing-Map {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.landing-map-content h2 {
+    text-align: center;
+    color: #003D81;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.landing-map-content iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
+
+
+/*======end======*/
+
+
+/* Tablet (768px and below) */
+
+@media (max-width: 768px) {
+    .landing-Hero {
+        padding: 30px 15px;
+    }
+    .landing-welcome-text h1 {
+        font-size: clamp(32px, 7vw, 60px);
+        margin: 0 0 8px 0;
+    }
+    .landing-welcome-subtext h2 {
+        font-size: clamp(24px, 6vw, 50px);
+    }
+    .landing-Hero h4 {
+        font-size: clamp(12px, 2.5vw, 14px);
+        margin: 20px 0 30px 0;
+    }
+    .landing-GS-btn,
+    .landing-tb-btn {
+        padding: clamp(8px 18px, 1vw 2vw, 10px 20px);
+        font-size: clamp(13px, 1.8vw, 14px);
+        margin: 5px;
+    }
+    .landing-services-Hero {
+        padding: 40px 15px;
+    }
+    .landing-services-Hero h3 {
+        font-size: clamp(24px, 5vw, 36px);
+        margin: 30px 0 20px 0;
+    }
+    .landing-services-nav {
+        padding: 10px clamp(15px, 3vw, 40px);
+    }
+    .landing-services-nav ul {
+        gap: 8px;
+    }
+    .landing-services-nav a {
+        padding: 12px 8px 0 8px;
+        font-size: clamp(11px, 1.8vw, 12px);
+    }
+    .landing-slide {
+        gap: clamp(15px, 2vw, 25px);
+        padding: 0 15px;
+    }
+    .landing-slide-content h3 {
+        font-size: clamp(22px, 4vw, 32px);
+        margin-bottom: 15px;
+    }
+    .landing-slide-content p {
+        font-size: clamp(13px, 2vw, 16px);
+        margin-bottom: 15px;
+    }
+    .landing-slide-image img {
+        max-width: 300px;
+    }
+}
+
+
+/* Mobile (480px and below) */
+
+@media (max-width: 480px) {
+    .landing-Hero {
+        padding: 20px 10px;
+        justify-content: flex-start;
+        padding-top: 80px;
+    }
+    .landing-welcome-text h1 {
+        font-size: clamp(24px, 6vw, 40px);
+        margin: 0 0 5px 0;
+    }
+    .landing-welcome-subtext h2 {
+        font-size: clamp(18px, 5vw, 32px);
+    }
+    .landing-Hero h4 {
+        font-size: clamp(11px, 2vw, 12px);
+        margin: 15px 0 20px 0;
+    }
+    .landing-GS-btn,
+    .landing-tb-btn {
+        padding: clamp(8px 16px, 1vw 2vw, 10px 18px);
+        font-size: clamp(12px, 1.5vw, 13px);
+        margin: 4px;
+        display: block;
+        width: 90%;
+        max-width: 250px;
+    }
+    .landing-services-Hero {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+    .landing-services-Hero h3 {
+        font-size: clamp(20px, 4vw, 28px);
+        margin: 20px 0 15px 0;
+    }
+    .landing-services-nav {
+        padding: 10px clamp(10px, 2vw, 20px);
+    }
+    .landing-services-nav ul {
+        gap: 6px;
+    }
+    .landing-services-nav li {
+        flex: 0 1 100%;
+    }
+    .landing-services-nav a {
+        padding: 10px 6px 0 6px;
+        font-size: clamp(10px, 1.5vw, 11px);
+    }
+    .landing-slider-container {
+        padding: clamp(15px, 2vw, 20px) clamp(10px, 2vw, 15px);
+        margin-top: 10px;
+    }
+    .landing-slider-wrapper {
+        gap: clamp(15px, 2vw, 20px);
+    }
+    .landing-slide {
+        gap: clamp(15px, 2vw, 20px);
+        padding: 0 10px;
+    }
+    .landing-slide-content h3 {
+        font-size: clamp(18px, 3.5vw, 24px);
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .landing-slide-content p {
+        font-size: clamp(12px, 1.8vw, 14px);
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .landing-slide-image img {
+        max-width: 280px;
+    }
+    .learn-more-link {
+        font-size: clamp(12px, 1.5vw, 14px);
+    }
+    .arrow {
+        font-size: clamp(14px, 1.8vw, 16px);
+        padding: clamp(4px 6px, 0.5vw, 5px 8px);
+    }
+    .left-arrow {
+        left: clamp(5px, 1vw, 10px);
+    }
+    .right-arrow {
+        right: clamp(5px, 1vw, 10px);
+    }
+}
+
+.LandingP-Hero p {
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-content h2,
+.hero-content p {
+    transform: translateX(25px);
+}
+
+
+/*======SERVICE PAGE======*/
+
+#body-services-bg {
+    font-family: "Radio Canada Big", sans-serif;
+    background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
+}
+
+
+/* SERVICES CARD-LIST */
+
+.cardlist {
+    padding: 16px 20px 24px;
+    list-style: none;
+    color: #333;
+    flex-grow: 0;
+}
+
+.cardlist li {
+    padding: 6px 10px;
+    font-size: 14px;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.cardlist li::before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: #0d6efd;
+}
+
+
+/* ================= SERVICES CARDS (Image-front hover reveal) ================= */
+
+.card {
+    overflow: hidden;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(14, 76, 123, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(14, 76, 123, 0.18);
+}
+
+.card .card-body {
+    padding: 0;
+}
+
+.card .card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card .card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(.2, .9, .2, 1);
+}
+
+.card .card-image .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    background: #4faaff;
+}
+
+.card:hover .card-image img {
+    transform: translateY(100%);
+}
+
+
+/*SERVICE OVERLAY TEXT*/
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-overlay h3 {
+    margin: 0 0 10px;
+    font-family: "Radio Canada Big", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-overlay p {
+    font-size: 14px;
+    font-family: "Source Serif Pro";
+    color: black;
+    margin-bottom: 20px;
+}
+
+.card-overlay a {
+    margin-top: auto;
+}
+
+.btn {
+    padding: 14px 20px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+#body-about-bg {
+    background: linear-gradient(to bottom, #146CAE 8%, #0E4C7B 54%, #0B3D62 77%, #082D48 100%);
+}
+
+.section-about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+    margin-top: -140px;
+}
+
+.hero-content h2 {
+    font-weight: 100;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* ================= FOOTER ================= */
+
+.custom-footer {
+    background-color: #6C6C6C;
+}
+
+.custom-footer h5,
+.custom-footer h6 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #2683EB;
+    padding-left: 4px;
+}
+
+.custom-footer p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.custom-footer hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    gap: -2px;
+    margin-top: -20px;
+    padding-left: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a i {
+    font-size: 25px;
+}
+
+.social-icons a i:hover {
+    color: #000000;
+}
+
+.fb-icon:hover {
+    margin-top: -1px;
+}
+
+.ig-icon:hover {
+    margin-top: -1px;
+}
+
+.tiktok-icon:hover {
+    margin-top: -1px;
+}
+
+.ph-icon,
+.env-icon,
+.add-icon {
+    margin-right: 10px;
+    color: white;
+}
+
+.footer-line {
+    color: white;
+}
+
+
+/* ===== Mobile Adjustments ===== */
+
+@media (max-width: 768px) {
+    .logo-footer {
+        padding-left: 0px;
+    }
+    .custom-footer {
+        text-align: center;
+    }
+    .custom-footer .row>div {
+        margin-bottom: 25px;
+    }
+    .footer-links li {
+        margin-bottom: 5px;
+    }
+}
+
+
+/*=========ABOUT SECTION MOBILE============*/
+
+@media (max-width: 354px) {
+    section[style*="60vh"] {
+        height: 50vh !important;
+        padding: 20px;
+    }
+    section h2 {
+        font-size: 40px !important;
+    }
+    section p {
+        font-size: 16px !important;
+        padding: 0 15px;
+    }
+    .container-fluid.py-3.text-center {
+        height: auto !important;
+        padding-bottom: 60px;
+    }
+    #custom-nav .nav-link {
+        font-size: 14px;
+        padding-top: 15px;
+    }
+    .acronym-letter {
+        font-size: 2.5rem;
+    }
+    #acronym-container span.fs-4 {
+        font-size: 16px !important;
+    }
+    #mission-content h1,
+    #vision-content h1 {
+        font-size: 2rem !important;
+    }
+    #mission-content p,
+    #vision-content p {
+        font-size: 15px !important;
+    }
+    #mission-content,
+    #vision-content {
+        padding: 20px !important;
+    }
+}

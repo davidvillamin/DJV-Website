@@ -1,0 +1,27 @@
+{
+  "name": "djv-website",
+  "version": "1.0.0",
+  "description": "A website for inquires",
+  "homepage": "https://github.com/davidvillamin/DJV-Website#readme",
+  "bugs": {
+    "url": "https://github.com/davidvillamin/DJV-Website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidvillamin/DJV-Website.git"
+  },
+  "license": "ISC",
+  "author": "DJV IT Solutions",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "jquery": "^4.0.0"
+  }
+}

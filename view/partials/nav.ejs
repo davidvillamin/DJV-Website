@@ -1,0 +1,147 @@
+<!--NAV BAR WITH MOBILE  ETO NA YUNG FINAL WAG IDELETE PLS -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black shadow-sm">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="/assets/img/ICON_FINAL.png" width="35" class="me-2"> DJV IT Solutions
+        </a>
+        <!-- Burger button (mobile only) -->
+        <button type="button" class="navbar-toggler d-flex d-lg-none order-3 p-2" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Desktop Menu -->
+        <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <!-- Desktop button -->
+                <li class="nav-item ms-3">
+                    <button type="button" class="btn btn-sm tech-support-btn" style="background-color:#90BADA; border-color:#90BADA; color: white;">
+                        Get Tech Support
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end navbar-dark bg-black text-bg-dark d-lg-none" tabindex="-1" id="mobileMenu">
+
+        <div class="offcanvas-header px-4 pb-0">
+
+            <h5 class="offcanvas-title align-items-center">
+                <img src="/assets/img/ICON_FINAL.png" width="30" class="me-2"> DJV IT Solutions
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas">
+        </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <!-- Mobile button -->
+                <li class="nav-item mt-3">
+                    <button class="btn btn-primary w-100 tech-support-btn" style="background-color:#90BADA; border-color:#90BADA; color: white" ;>
+                    Get Tech Support
+                </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- First Modal: Tech Support Category -->
+<div id="techSupportModal" class="tech-support-modal-overlay">
+    <div class="tech-support-modal">
+        <button class="modal-close-btn" id="techSupportModalCloseBtn">&times;</button>
+        <div class="support-options">
+            <div class="support-option message-option" id="messageOption">
+                <i class="bi bi-chat-dots" style="margin-bottom: 0px;"></i>
+                <h3>MESSAGE</h3>
+            </div>
+            <div class="support-option call-option" id="callOption">
+                <i class="bi bi-telephone"></i>
+                <h3>CALL</h3>
+            </div>
+            <div class="support-option email-option" id="emailOption">
+                <i class="bi bi-envelope-fill"></i>
+                <h3>EMAIL</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Second Modal: Message Options -->
+<div id="messageModal" class="tech-support-modal-overlay">
+    <div class="tech-support-modal">
+        <button class="modal-close-btn" id="messageModalCloseBtn">&times;</button>
+        <div class="messaging-options">
+            <a href="https://www.facebook.com/djvitsolution" target="_blank" class="message-option-btn messenger">
+                <i class="bi bi-messenger"></i> Message via Messenger
+            </a>
+            <a href="https://wa.me/639215508103" target="_blank" class="message-option-btn whatsapp">
+                <i class="bi bi-whatsapp"></i>Message via WhatsApp
+            </a>
+            <a href="viber://chat?number=639215508103" target="_blank" class="message-option-btn viber">
+                <i class="fa-brands fa-viber"></i>Message via Viber
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Third Modal: Call Options -->
+<div id="callModal" class="tech-support-modal-overlay">
+    <div class="tech-support-modal">
+        <button class="modal-close-btn" id="callModalCloseBtn">&times;</button>
+        <div class="phone-numbers-modal">
+            <div class="phone-section">
+                <div class="phone-grid">
+                    <a href="tel:09629461425" class="phone-link-btn flex-fill ps-0">
+                        <i class="bi bi-phone"></i> (0962)-9461-425
+                    </a>
+                    <a href="tel:09220427113" class="phone-link-btn flex-fill ps-0">
+                        <i class="bi bi-phone"></i> (0922)-0427-113
+                    </a>
+                    <a href="tel:09215508103" class="phone-link-btn flex-fill ps-0">
+                        <i class="bi bi-phone"></i>(0921)-5508-103
+                    </a>
+                    <a href="tel:09155443789" class="phone-link-btn flex-fill ps-0">
+                        <i class="bi bi-phone"></i> (0915)-5443-789
+                    </a>
+                </div>
+            </div>
+            <div class="phone-section">
+                <div class="d-flex ">
+                    <a href="tel:046-514-1914" class="phone-link-btn flex-fill ps-0">
+                        <i class="bi bi-telephone"></i> (046)-514-1914
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fourth Modal: Email Options -->
+<div id="emailModal" class="tech-support-modal-overlay">
+    <div class="tech-support-modal">
+        <button class="modal-close-btn" id="emailModalCloseBtn">&times;</button>
+        <div class="email-options">
+            <a href="mailto:marketing@djvitsolutions.com" class="email-option-btn">
+                <strong>
+                   <i class="bi bi-envelope-fill"></i> marketing@djvitsolutions.com</strong><br>
+                <span>Email Support</span>
+            </a>
+        </div>
+    </div>
+</div>
